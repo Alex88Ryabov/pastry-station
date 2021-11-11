@@ -12,7 +12,7 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <header class="page__header">
+      <header class="header">
         <div class="header__in">
           <div class="header__menu">
             <svg class="icon icon-burger">
@@ -28,34 +28,70 @@
           </div>
           <nav class="header__tabs tabs">
             <ul class="tabs__list">
-              <li class="tabs__item">
-                <div class="tabs__img-box is-active">
+              <li class="tabs__item is-active">
+                <div class="tabs__img-box">
                   <img src="./img/popular.png" alt="ВкладкаПопулярное" class="tabs__img" width="48px" height="48px">
                 </div>
                 <p class="tabs__description"> Популярное </p>
               </li>
-              <li class="tabs__item">
-                <div class="tabs__img-box ">
+              <li class="tabs__item ">
+                <div class="tabs__img-box">
                   <img src="./img/heart.png" alt="ВкладкаИзбранное" class="tabs__img" width="48px" height="48px">
                 </div>
                 <p class="tabs__description"> Избранное </p>
               </li>
-              <li class="tabs__item">
-                <div class="tabs__img-box ">
+              <li class="tabs__item ">
+                <div class="tabs__img-box">
                   <img src="./img/breakfast.png" alt="ВкладкаЗавтраки" class="tabs__img" width="48px" height="48px">
                 </div>
                 <p class="tabs__description"> Завтраки </p>
               </li>
-              <li class="tabs__item">
-                <div class="tabs__img-box ">
+              <li class="tabs__item ">
+                <div class="tabs__img-box">
                   <img src="./img/croissant.png" alt="ВкладкаВыпечка" class="tabs__img" width="48px" height="48px">
                 </div>
                 <p class="tabs__description"> Выпечка </p>
+              </li>
+              <li class="tabs__item ">
+                <div class="tabs__img-box">
+                  <img src="./img/coffee.png" alt="ВкладкаКофе" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Кофе </p>
+              </li>
+              <li class="tabs__item ">
+                <div class="tabs__img-box">
+                  <img src="./img/sandwich.png" alt="ВкладкаСэндвичи" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Сэндвичи </p>
               </li>
             </ul>
           </nav>
         </div>
       </header>
+      <main class="main">
+        <div class="main__in">
+          <div class="wrapper">
+            <div class="main__product product">
+              <div class="product__card">
+                <button class="product__favourite">
+                  <svg class="icon icon-favourite">
+                    <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img src="./img/mini-set-w.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                <div class="product__description">
+                  <div class="product__title-wrapper">
+                    <img src="./img/croissant.png" alt="Круассан" class="product__icon" width="24" height="24">
+                    <h4 class="product__title"> Набор мини-круасанов </h4>
+                  </div>
+                  <p class="product__price"> 195 ₴ </p>
+                  <p class="product__type"> Выпечка </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
       <!-- 
 	
 <svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>

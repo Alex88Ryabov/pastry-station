@@ -1,0 +1,35 @@
+<main class="main">
+	<div class="main__in">
+		<div class="wrapper">
+
+			{% import "../data/_product-card.html" as data %}
+			<div class="main__product product">
+				{% for card in data.cards %}
+				<div class="product__card">
+					<button class="product__favourite">
+						{{mixins.icon('favourite')}}
+					</button>
+					<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+					<div class="product__description">
+						<div class="product__title-wrapper">
+							<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
+							<h4 class="product__title">
+								{{card.title}}
+							</h4>
+						</div>
+						<p class="product__price">
+							{{card.price}} ₴
+						</p>
+						<p class="product__type">
+							{{card.type}}
+						</p>																		
+					</div>
+				</div>
+			</div>
+
+			{% endfor %}
+
+
+		</div>
+	</div>
+</main>

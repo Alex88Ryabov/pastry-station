@@ -1,34 +1,35 @@
-<header class="page__header">
-  <div class="header__in">
-    <div class="header__menu">
-      {{mixins.icon('burger')}}
-      <div class="header__text">
-        <h1 class="header__title">
-          Pastry-Station
-        </h1>
-        <p class="header__slogan">
-          Какой-то длинный слоган
-        </p>
-      </div>
-      {{mixins.icon('search')}}
-    </div>
-    <nav class="header__tabs tabs">
-      <ul class="tabs__list">
-        {% import "../data/tabs.html" as data %}
-        {% for tab in data.tabs %}
-        <li class="tabs__item">
-          <div class="tabs__img-box {{tab.class}}">
-            <img src="{{tab.imageUrl}}" alt="Вкладка{{tab.name}}" class="tabs__img" width="48px" height="48px">
-          
-          </div>
-          <p class="tabs__description">
-            {{tab.name}}
-          </p>
-        </li>
-        {% endfor %}
-      </ul>
+<header class="header">
+	<div class="header__in">
+		<div class="header__menu">
+			{{mixins.icon('burger')}}
+			<div class="header__text">
+				<h1 class="header__title">
+					Pastry-Station
+				</h1>
+				<p class="header__slogan">
+					Какой-то длинный слоган
+				</p>
+			</div>
+			{{mixins.icon('search')}}
+		</div>
+		<nav class="header__tabs tabs">
+			<ul class="tabs__list">
+				{% import "../data/_tabs.html" as data %}
+				{% for tab in data.tabs %}
+				<li class="tabs__item {{tab.class}}">
+					<div class="tabs__img-box">
+						<img src="{{tab.imageUrl}}" alt="Вкладка{{tab.name}}" class="tabs__img" width="48px"
+							height="48px">
 
-    </nav>
-  </div>
+					</div>
+					<p class="tabs__description">
+						{{tab.name}}
+					</p>
+				</li>
+				{% endfor %}
+			</ul>
+
+		</nav>
+	</div>
 
 </header>
