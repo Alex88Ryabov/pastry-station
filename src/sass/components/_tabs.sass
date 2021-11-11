@@ -1,0 +1,41 @@
+@import ../variables
+  
+.tabs__list
+  display: flex
+  align-items: center
+  width: 100%
+  overflow-x: auto
+  white-space: nowrap
+  padding: 8px 0 
+  padding-bottom: 6px
+  background-color: $header-background-color
+  transition: box-shadow .4s ease
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25)
+.tabs__item
+  margin-left: 8px
+  &:first-child
+    margin-left: 16px
+
+
+.tabs__img-box
+  position: relative
+  width: 64px
+  height: 64px
+  display: -webkit-flex
+  justify-content: center
+  align-items: center
+  font-size: 38px
+  margin: 0 auto 
+  margin-bottom: 4px
+
+.tabs__description
+  max-width: 72px
+  text-align: center
+  line-height: 16px
+  opacity: 0.5
+  font-size: $small-font
+  color: $text-color
+
+.is-active
+  background-color:#F9D953
+  border-radius: 25%

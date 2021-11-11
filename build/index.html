@@ -14,11 +14,14 @@
     <div class="out">
       <header class="page__header">
         <div class="header__in">
-          <div class="header__menubar">
+          <div class="header__menu">
             <svg class="icon icon-burger">
               <use xlink:href="img/sprite.svg#icon-burger"></use>
             </svg>
-            <h1 class="header__title"> Pastry-Station </h1>
+            <div class="header__text">
+              <h1 class="header__title"> Pastry-Station </h1>
+              <p class="header__slogan"> Какой-то длинный слоган </p>
+            </div>
             <svg class="icon icon-search">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
@@ -26,28 +29,28 @@
           <nav class="header__tabs tabs">
             <ul class="tabs__list">
               <li class="tabs__item">
-                <img src="../icons/popular.png" alt="popular tab icon" class="tabs__img" width="48px" height="48px">
+                <div class="tabs__img-box is-active">
+                  <img src="./img/popular.png" alt="ВкладкаПопулярное" class="tabs__img" width="48px" height="48px">
+                </div>
                 <p class="tabs__description"> Популярное </p>
               </li>
               <li class="tabs__item">
-                <img src="../icons/heart.png" alt="heart tab icon" class="tabs__img" width="48px" height="48px">
+                <div class="tabs__img-box ">
+                  <img src="./img/heart.png" alt="ВкладкаИзбранное" class="tabs__img" width="48px" height="48px">
+                </div>
                 <p class="tabs__description"> Избранное </p>
               </li>
               <li class="tabs__item">
-                <img src="../icons/breakfast.png" alt="breakfast tab icon" class="tabs__img" width="48px" height="48px">
+                <div class="tabs__img-box ">
+                  <img src="./img/breakfast.png" alt="ВкладкаЗавтраки" class="tabs__img" width="48px" height="48px">
+                </div>
                 <p class="tabs__description"> Завтраки </p>
               </li>
               <li class="tabs__item">
-                <img src="../icons/croissant.png" alt="croissant tab icon" class="tabs__img" width="48px" height="48px">
+                <div class="tabs__img-box ">
+                  <img src="./img/croissant.png" alt="ВкладкаВыпечка" class="tabs__img" width="48px" height="48px">
+                </div>
                 <p class="tabs__description"> Выпечка </p>
-              </li>
-              <li class="tabs__item">
-                <img src="../icons/coffee.png" alt="coffee tab icon" class="tabs__img" width="48px" height="48px">
-                <p class="tabs__description"> Кофе </p>
-              </li>
-              <li class="tabs__item">
-                <img src="../icons/sandwich.png" alt="sandwich tab icon" class="tabs__img" width="48px" height="48px">
-                <p class="tabs__description"> Сэндвичи </p>
               </li>
             </ul>
           </nav>

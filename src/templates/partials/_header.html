@@ -1,54 +1,34 @@
 <header class="page__header">
   <div class="header__in">
-    <div class="header__menubar">
+    <div class="header__menu">
       {{mixins.icon('burger')}}
-      <h1 class="header__title">
-        Pastry-Station
-      </h1>
-
+      <div class="header__text">
+        <h1 class="header__title">
+          Pastry-Station
+        </h1>
+        <p class="header__slogan">
+          Какой-то длинный слоган
+        </p>
+      </div>
       {{mixins.icon('search')}}
     </div>
     <nav class="header__tabs tabs">
       <ul class="tabs__list">
+        {% import "../data/tabs.html" as data %}
+        {% for tab in data.tabs %}
         <li class="tabs__item">
-          <img src="../icons/popular.png" alt="popular tab icon" class="tabs__img" width="48px" height="48px">
+          <div class="tabs__img-box {{tab.class}}">
+            <img src="{{tab.imageUrl}}" alt="Вкладка{{tab.name}}" class="tabs__img" width="48px" height="48px">
+          
+          </div>
           <p class="tabs__description">
-            Популярное
+            {{tab.name}}
           </p>
         </li>
-        <li class="tabs__item">
-          <img src="../icons/heart.png" alt="heart tab icon" class="tabs__img" width="48px" height="48px">
-          <p class="tabs__description">
-            Избранное
-          </p>
-        </li>
-        <li class="tabs__item">
-          <img src="../icons/breakfast.png" alt="breakfast tab icon" class="tabs__img" width="48px" height="48px">
-          <p class="tabs__description">
-            Завтраки
-          </p>
-        </li>
-        <li class="tabs__item">
-          <img src="../icons/croissant.png" alt="croissant tab icon" class="tabs__img" width="48px" height="48px">
-          <p class="tabs__description">
-            Выпечка
-          </p>
-        </li>
-        <li class="tabs__item">
-          <img src="../icons/coffee.png" alt="coffee tab icon" class="tabs__img" width="48px" height="48px">
-          <p class="tabs__description">
-            Кофе
-          </p>
-        </li>
-        <li class="tabs__item">
-          <img src="../icons/sandwich.png" alt="sandwich tab icon" class="tabs__img" width="48px" height="48px">
-          <p class="tabs__description">
-            Сэндвичи
-          </p>
-        </li>
+        {% endfor %}
       </ul>
 
     </nav>
   </div>
-  
+
 </header>

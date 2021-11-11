@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const path = require('path');
 const config = require('./gulp/config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { copyFile } = require('fs');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 function createConfig(env) {
   let isProduction,
@@ -53,6 +55,9 @@ function createConfig(env) {
         analyzerPort: 4000,
         openAnalyzer: false,
       }),
+      new CopyWebpackPlugin([
+        { from: '../static/data/categories.json', to: '../data/categories.json' }],
+        { debug: 'error' })
     ],
     resolve: {
       extensions: ['.js'],
