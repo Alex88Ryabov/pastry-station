@@ -2,7 +2,8 @@
   
 .tabs
   $this: & //!!!! $this = .tabs !!!!
-  
+  overflow: hidden
+  position: relative
   &__list
     display: flex
     align-items: center
@@ -15,10 +16,51 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25)
   &__item
     margin-left: 8px
+
+
+
+    &:nth-child(10):focus::before 
+      left: 345px 
+    &:nth-child(9):focus::before 
+      left: 345px 
+    &:nth-child(8):focus::before 
+      left: 345px 
+    &:nth-child(7):focus::before 
+      left: 345px 
+
+    &:nth-child(6):focus ~ li:last-of-type::before 
+      left: 295px 
+
+    &:nth-child(5):focus ~ li:last-of-type::before 
+      left: 245px 
+
+    &:nth-child(4):focus ~ li:last-of-type::before 
+      left: 195px 
+
+    &:nth-child(3):focus ~ li:last-of-type::before 
+      left: 145px 
+
+    &:nth-child(2):focus ~ li:last-of-type::before 
+      left: 95px 
+
+    &:nth-child(1):focus ~ li:last-of-type::before 
+      left: 45px 
+
+    &:last-of-type::before
+      content: ''
+      height: 36px
+      width: 36px
+      display: inline-block
+      background: #4B916C
+      position: absolute
+      left:  45px
+      transition: left 1s
+      z-index: -1
+      border-radius: 50%      
     &:first-child
       margin-left: 16px
     &.is-active
-      #{$this}__img-box // #{$this} -- используем обьявленную ранее переменную!
+      #{$this}__img-box // #$this -- используем обьявленную ранее переменную!
         background-color:#F9D953
         border-radius: 25%
       #{$this}__description
@@ -36,8 +78,7 @@
     margin: 0 auto 
     margin-bottom: 4px
 
-  &__description
-    
+  &__description    
     display: flex
     justify-content: center
     max-width: 72px
