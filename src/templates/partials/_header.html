@@ -1,16 +1,22 @@
 <header class="header">
 	<div class="header__in">
 		<div class="header__menu">
-			{{mixins.icon('burger')}}
-			<div class="header__text">
-				<h1 class="header__title">
+			<button class="header__btn">
+				{{mixins.icon('burger')}}
+
+			</button>
+			<div class="header__box">
+				<h1 class="header__logo">
 					Pastry-Station
 				</h1>
 				<p class="header__slogan">
 					Какой-то длинный слоган
 				</p>
 			</div>
-			{{mixins.icon('search')}}
+			<button class="header__btn">
+
+				{{mixins.icon('search')}}
+			</button>
 		</div>
 		<nav class="header__tabs tabs">
 			<ul class="tabs__list">
