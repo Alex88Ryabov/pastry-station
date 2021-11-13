@@ -7,35 +7,14 @@
 			</button>
 			<div class="header__box">
 				<h1 class="header__logo">
-					Pastry-Station
+					Pastry Station
 				</h1>
-				<p class="header__slogan">
-					Какой-то длинный слоган
-				</p>
 			</div>
 			<button class="header__btn">
 
 				{{mixins.icon('search')}}
 			</button>
 		</div>
-		<nav class="header__tabs tabs">
-			<ul class="tabs__list">
-				{% import "../data/_tabs.html" as data %}
-				{% for tab in data.tabs %}
-				<li class="tabs__item {{tab.class}}">
-					<div class="tabs__img-box">
-						<img src="{{tab.imageUrl}}" alt="Вкладка{{tab.name}}" class="tabs__img" width="48px"
-							height="48px">
-
-					</div>
-					<p class="tabs__description">
-						{{tab.name}}
-					</p>
-				</li>
-				{% endfor %}
-			</ul>
-
-		</nav>
 	</div>
 
 </header>

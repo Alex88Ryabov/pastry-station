@@ -1,3 +1,4 @@
+@import variables
 +font('Stratos-Regular', 'stratos-regular')
 +font('Stratos-Medium', 'stratos-medium')
 +font('Stratos-Bold', 'stratos-bold')
@@ -5,15 +6,15 @@
 =fontSR
   font-family: 'Stratos-Regular', sans-serif
   font-style: normal
-  font-weight: normal
-=fontSN
+  font-weight: 400
+=fontSM
   font-family: 'Stratos-Medium', sans-serif
   font-style: normal
-  font-weight: normal
+  font-weight: 600
 =fontSB
   font-family: 'Stratos-Bold', sans-serif
   font-style: normal
-  font-weight: normal
+  font-weight: 700
 
 body
   +fontSR
@@ -25,4 +26,10 @@ body
 .wrapper
   width: 100%
   min-width: 320px
-  padding: 0 16px
+  padding: $basic-padding
+
+h1
+  +fontSB
+
+button
+  background-color: transparent
