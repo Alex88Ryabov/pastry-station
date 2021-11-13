@@ -16,13 +16,16 @@ title: product-page-page
             <button class="product-page__favourite">
                 {{mixins.icon('favourite')}}
             </button>
+            <button class="product-page__arrow-btn">
+                {{mixins.icon('arrow')}}
+            </button>
             <img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product-page__img">
             <p class="product-page__type">
                 {{card.type}}
             </p>
         </div>
 
-        <div class="product-page__description">
+        <div class="product-page__info">
             <div class="product-page__title-wrapper">
                 <img src="{{card.icon}}" alt="{{card.iconName}}" class="product-page__icon" width="24" height="24">
                 <h4 class="product-page__title">
@@ -34,6 +37,18 @@ title: product-page-page
             </p>
         </div>
     </div>
+</div>
+<button class="product-page__button">
+    {{mixins.icon('plus-count')}}
+</button>
+<div class="product-page__description">
+    <p class="product-page__text">
+        Круассан миндальный, круассан с кокосом, круассан с шоколадом, круассан с фисташкой, круассан малина-роза, круассан
+        матча
+    </p>
+    <p class="product-page__text">
+        Если у тебя есть на что-то аллергия, расскажи нам об этом, пожалуйста
+    </p>
 </div>
 {% endfor %}
 
