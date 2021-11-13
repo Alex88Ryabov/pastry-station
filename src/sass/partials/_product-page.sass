@@ -1,0 +1,75 @@
+@import ../variables
+
+.product-page
+    position: relative
+    cursor: pointer
+    &__card
+        display: flex
+        flex-direction: column
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1)
+        &:not(:last-child)
+            margin-bottom: 8px
+    &__img-box
+        position: relative
+        overflow: hidden
+    &__img
+        width: 100%
+        object-fit: cover
+    &__type
+        position: absolute
+        bottom: 0
+        right: 0
+        height: 24px
+        padding: 2px 8px
+        font-weight: 400
+        line-height: 24px
+        letter-spacing: .06em
+        text-transform: uppercase
+        text-align: center
+        font-size: 11px
+        background-color: #ffffff
+    &__favourite
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: 4px
+        right: 4px
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        background-color: #ffffff
+        svg
+            fill: none
+            stroke: #000000
+            stroke-width: 2px
+            font-size: 24px
+    &__description
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        min-height: 56px
+        overflow: hidden
+        padding: 8px
+        background-color: #ffffff
+        color: $primary-text-color
+
+    &__title
+        max-height: 40px
+        width: calc(100% - 33px)
+        font-weight: 500
+        font-size: $medium-font-size
+        line-height: 20px
+    &__price
+        font-weight: 500
+        font-size: $large-font-size
+        line-height: 28px
+        text-align: right
+        text-transform: capitalize
+
+    &__title-wrapper
+        display: flex
+        align-items: flex-start
+        justify-content: center
+    &__icon
+        margin-right: 8px

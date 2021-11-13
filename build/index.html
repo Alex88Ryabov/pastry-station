@@ -32,103 +32,121 @@
         </div>
       </header>
       <main class="main">
-        <div class="main__in">
-          <div id="my-js-tabs">
-            <nav class="main__tabs tabs js-tabs__nav">
-              <ul class="tabs__list js-tabs__tabs-container">
-                <li tabindex="0" class="tabs__tab js-tabs__tab  active">
-                  <div class="tabs__img-box">
-                    <img src="./img/popular.png" alt="Вкладка Популярное" class="tabs__img" width="48px" height="48px">
+        <div id="my-js-tabs" class="main__in">
+          <nav class="main__tabs tabs js-tabs__nav">
+            <ul class="tabs__list js-tabs__tabs-container">
+              <li tabindex="0" class="tabs__tab js-tabs__tab  active">
+                <div class="tabs__img-box">
+                  <img src="./img/popular.png" alt="Вкладка Популярное" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Популярное </p>
+              </li>
+              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
+                <div class="tabs__img-box">
+                  <img src="./img/heart.png" alt="Вкладка Избранное" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Избранное </p>
+              </li>
+              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
+                <div class="tabs__img-box">
+                  <img src="./img/breakfast.png" alt="Вкладка Завтраки" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Завтраки </p>
+              </li>
+              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
+                <div class="tabs__img-box">
+                  <img src="./img/croissant.png" alt="Вкладка Выпечка" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Выпечка </p>
+              </li>
+              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
+                <div class="tabs__img-box">
+                  <img src="./img/coffee.png" alt="Вкладка Кофе" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Кофе </p>
+              </li>
+              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
+                <div class="tabs__img-box">
+                  <img src="./img/sandwich.png" alt="Вкладка Сендвич" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Сендвич </p>
+              </li>
+              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
+                <div class="tabs__img-box">
+                  <img src="./img/salad.png" alt="Вкладка Салат" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Салат </p>
+              </li>
+              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
+                <div class="tabs__img-box">
+                  <img src="./img/bread.png" alt="Вкладка Выпечка" class="tabs__img" width="48px" height="48px">
+                </div>
+                <p class="tabs__description"> Выпечка </p>
+              </li>
+            </ul>
+            <div class="tabs__marker js-tabs__marker"></div>
+          </nav>
+          <ul class="js-tabs__content-container">
+            <li class="js-tabs__content active">
+              <div class="main__product product">
+                <div class="product__card">
+                  <div class="product__img-box">
+                    <button class="product__favourite">
+                      <svg class="icon icon-favourite">
+                        <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                      </svg>
+                    </button>
+                    <img src="./img/mini-set.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                    <p class="product__type"> Выпечка </p>
                   </div>
-                  <p class="tabs__description"> Популярное </p>
-                </li>
-                <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                  <div class="tabs__img-box">
-                    <img src="./img/heart.png" alt="Вкладка Избранное" class="tabs__img" width="48px" height="48px">
-                  </div>
-                  <p class="tabs__description"> Избранное </p>
-                </li>
-                <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                  <div class="tabs__img-box">
-                    <img src="./img/breakfast.png" alt="Вкладка Завтраки" class="tabs__img" width="48px" height="48px">
-                  </div>
-                  <p class="tabs__description"> Завтраки </p>
-                </li>
-                <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                  <div class="tabs__img-box">
-                    <img src="./img/croissant.png" alt="Вкладка Выпечка" class="tabs__img" width="48px" height="48px">
-                  </div>
-                  <p class="tabs__description"> Выпечка </p>
-                </li>
-              </ul>
-              <div class="tabs__marker js-tabs__marker"></div>
-            </nav>
-            <ul class="js-tabs__content-container">
-              <li class="js-tabs__content active">
-                <div class="main__product product">
-                  <div class="product__card">
-                    <div class="product__img-box">
-                      <button class="product__favourite">
-                        <svg class="icon icon-favourite">
-                          <use xlink:href="img/sprite.svg#icon-favourite"></use>
-                        </svg>
-                      </button>
-                      <img src="./img/mini-set.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
-                      <p class="product__type"> Выпечка </p>
+                  <div class="product__description">
+                    <div class="product__title-wrapper">
+                      <img src="./img/croissant.png" alt="Круассан" class="product__icon" width="24" height="24">
+                      <h4 class="product__title"> Набор мини-круасанов </h4>
                     </div>
-                    <div class="product__description">
-                      <div class="product__title-wrapper">
-                        <img src="./img/croissant.png" alt="Круассан" class="product__icon" width="24" height="24">
-                        <h4 class="product__title"> Набор мини-круасанов </h4>
-                      </div>
-                      <p class="product__price"> 195 ₴ </p>
-                    </div>
+                    <p class="product__price"> 195 ₴ </p>
                   </div>
                 </div>
-              </li>
-              <li class="js-tabs__content">
-                <div class="main__product product">
-                  <div class="product__card">
-                    <div class="product__img-box">
-                      <button class="product__favourite">
-                        <svg class="icon icon-favourite">
-                          <use xlink:href="img/sprite.svg#icon-favourite"></use>
-                        </svg>
-                      </button>
-                      <img src="./img/croissant-apricot.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
-                      <p class="product__type">
-                      </p>
-                    </div>
-                    <div class="product__description">
-                      <div class="product__title-wrapper">
-                        <img src="./img/croissant.png" alt="круассан" class="product__icon" width="24" height="24">
-                        <h4 class="product__title"> Набор мини-круасанов </h4>
-                      </div>
-                      <p class="product__price"> 85 ₴ </p>
-                    </div>
-                  </div>
+              </div>
+            </li>
+            <li class="js-tabs__content">
+              <div class="product__card">
+                <div class="product__img-box">
+                  <button class="product__favourite">
+                    <svg class="icon icon-favourite">
+                      <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                    </svg>
+                  </button>
+                  <img src="./img/mini-set.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                  <p class="product__type"> Выпечка </p>
                 </div>
-              </li>
-              <li class="js-tabs__content">
-                <div class="main__product product">
-                  <div class="product__card">
-                    <div class="product__img-box">
-                      <button class="product__favourite">
-                        <svg class="icon icon-favourite">
-                          <use xlink:href="img/sprite.svg#icon-favourite"></use>
-                        </svg>
-                      </button>
-                      <img src="./img/kuriniy-bulion.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
-                      <p class="product__type">
-                      </p>
+                <div class="product__description">
+                  <div class="product__title-wrapper">
+                    <img src="./img/croissant.png" alt="Круассан" class="product__icon" width="24" height="24">
+                    <h4 class="product__title"> Набор мини-круасанов </h4>
+                  </div>
+                  <p class="product__price"> 195 ₴ </p>
+                </div>
+              </div>
+            </li>
+            <li class="js-tabs__content">
+              <div class="main__product product">
+                <div class="product__card">
+                  <div class="product__img-box">
+                    <button class="product__favourite">
+                      <svg class="icon icon-favourite">
+                        <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                      </svg>
+                    </button>
+                    <img src="./img/kuriniy-bulion.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                    <p class="product__type"> Завтрак </p>
+                  </div>
+                  <div class="product__description">
+                    <div class="product__title-wrapper">
+                      <img src="./img/breakfast.png" alt="Завтрак" class="product__icon" width="24" height="24">
+                      <h4 class="product__title"> Набор мини-круасанов </h4>
                     </div>
-                    <div class="product__description">
-                      <div class="product__title-wrapper">
-                        <img src="./img/breakfast.png" alt="Завтрак" class="product__icon" width="24" height="24">
-                        <h4 class="product__title"> Набор мини-круасанов </h4>
-                      </div>
-                      <p class="product__price"> 50 ₴ </p>
-                    </div>
+                    <p class="product__price"> 50 ₴ </p>
                   </div>
                 </div>
                 <div class="product__card">
@@ -139,8 +157,7 @@
                       </svg>
                     </button>
                     <img src="./img/hala-kuritsa.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
-                    <p class="product__type">
-                    </p>
+                    <p class="product__type"> Завтрак </p>
                   </div>
                   <div class="product__description">
                     <div class="product__title-wrapper">
@@ -150,21 +167,129 @@
                     <p class="product__price"> 145 ₴ </p>
                   </div>
                 </div>
-          </div>
-          </li>
-          <li class="js-tabs__content">
-            <p>content 4</p>
-          </li>
+              </div>
+            </li>
+            <li class="js-tabs__content">
+              <div class="main__product product">
+                <div class="product__card">
+                  <div class="product__img-box">
+                    <button class="product__favourite">
+                      <svg class="icon icon-favourite">
+                        <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                      </svg>
+                    </button>
+                    <img src="./img/croissant-apricot.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                    <p class="product__type"> Выпечка </p>
+                  </div>
+                  <div class="product__description">
+                    <div class="product__title-wrapper">
+                      <img src="./img/croissant.png" alt="круассан" class="product__icon" width="24" height="24">
+                      <h4 class="product__title"> Набор мини-круасанов </h4>
+                    </div>
+                    <p class="product__price"> 85 ₴ </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="js-tabs__content">
+              <div class="main__product product">
+                <div class="product__card">
+                  <div class="product__img-box">
+                    <button class="product__favourite">
+                      <svg class="icon icon-favourite">
+                        <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                      </svg>
+                    </button>
+                    <img src="./img/cappuccino.jpg" alt="КартинкаКапучино" class="product__img">
+                    <p class="product__type"> Кофе </p>
+                  </div>
+                  <div class="product__description">
+                    <div class="product__title-wrapper">
+                      <img src="./img/coffee.png" alt="Кофе" class="product__icon" width="24" height="24">
+                      <h4 class="product__title"> Капучино </h4>
+                    </div>
+                    <p class="product__price"> 75 ₴ </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="js-tabs__content">
+              <div class="main__product product">
+                <div class="product__card">
+                  <div class="product__img-box">
+                    <button class="product__favourite">
+                      <svg class="icon icon-favourite">
+                        <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                      </svg>
+                    </button>
+                    <img src="./img/sandwich.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                    <p class="product__type"> Сэндвич </p>
+                  </div>
+                  <div class="product__description">
+                    <div class="product__title-wrapper">
+                      <img src="./img/sandwich.png" alt="Сэндвич" class="product__icon" width="24" height="24">
+                      <h4 class="product__title"> Набор мини-круасанов </h4>
+                    </div>
+                    <p class="product__price"> 150 ₴ </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="js-tabs__content">
+              <div class="main__product product">
+                <div class="product__card">
+                  <div class="product__img-box">
+                    <button class="product__favourite">
+                      <svg class="icon icon-favourite">
+                        <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                      </svg>
+                    </button>
+                    <img src="./img/salat-zelen.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                    <p class="product__type"> Салат </p>
+                  </div>
+                  <div class="product__description">
+                    <div class="product__title-wrapper">
+                      <img src="./img/salad.png" alt="Сэндвич" class="product__icon" width="24" height="24">
+                      <h4 class="product__title"> Набор мини-круасанов </h4>
+                    </div>
+                    <p class="product__price"> 150 ₴ </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="js-tabs__content">
+              <div class="main__product product">
+                <div class="product__card">
+                  <div class="product__img-box">
+                    <button class="product__favourite">
+                      <svg class="icon icon-favourite">
+                        <use xlink:href="img/sprite.svg#icon-favourite"></use>
+                      </svg>
+                    </button>
+                    <img src="./img/baget-pshenichniy.jpg" alt="КартинкаНабор мини-круасанов" class="product__img">
+                    <p class="product__type"> Хлеб </p>
+                  </div>
+                  <div class="product__description">
+                    <div class="product__title-wrapper">
+                      <img src="./img/bread.png" alt="Хлеб" class="product__icon" width="24" height="24">
+                      <h4 class="product__title"> Набор мини-круасанов </h4>
+                    </div>
+                    <p class="product__price"> 35 ₴ </p>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
+      </main>
+      <footer class="footer">
         <div class="main__basket ">
           <button class="basket">
             <span class="basket__count">15</span>
             <img src="./img/basket.png" alt="Корзина" class="basket__img" width="45" height="45">
           </button>
         </div>
-    </div>
-    </main>
+      </footer>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

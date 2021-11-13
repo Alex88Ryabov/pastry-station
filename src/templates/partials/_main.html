@@ -1,136 +1,282 @@
 <main class="main">
-	<div class="main__in">
-		<div id="my-js-tabs">
-			<nav class="main__tabs tabs js-tabs__nav">
-				{% import "../data/_tabs.html" as data %}
-				
-					<ul class="tabs__list js-tabs__tabs-container">
-						{% for tab in data.tabs %}
-						<li tabindex="0" class="tabs__tab js-tabs__tab  {{tab.class}}">
-							<div class="tabs__img-box">
-								<img src="{{tab.imageUrl}}" alt="Вкладка {{tab.name}}" class="tabs__img" width="48px" height="48px">
+	<div id="my-js-tabs" class="main__in">
 
-							</div>
-							<p class="tabs__description">
-								{{tab.name}}
-							</p>
-							
-						</li>
-						{% endfor %}
-					</ul>
-					<div class="tabs__marker js-tabs__marker"></div>
-				
-			</nav>
-			<ul class="js-tabs__content-container">
-				<li class="js-tabs__content active">
+		<nav class="main__tabs tabs js-tabs__nav">
+			{% import "../data/_tabs.html" as data %}
 
+			<ul class="tabs__list js-tabs__tabs-container">
+				{% for tab in data.tabs %}
+				<li tabindex="0" class="tabs__tab js-tabs__tab  {{tab.class}}">
+					<div class="tabs__img-box">
+						<img src="{{tab.imageUrl}}" alt="Вкладка {{tab.name}}" class="tabs__img" width="48px"
+							height="48px">
 
-
-					{% import "../data/_product-card.html" as data %}
-					<div class="main__product product">
-						{% for card in data.cards %}
-						<div class="product__card">
-							<div class="product__img-box">
-								<button class="product__favourite">
-									{{mixins.icon('favourite')}}
-								</button>
-								<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
-								<p class="product__type">
-									{{card.type}}
-								</p>
-							</div>
-
-							<div class="product__description">
-								<div class="product__title-wrapper">
-									<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
-									<h4 class="product__title">
-										{{card.title}}
-									</h4>
-								</div>
-								<p class="product__price">
-									{{card.price}} ₴
-								</p>
-							</div>
-						</div>
 					</div>
-					{% endfor %}
-					
+					<p class="tabs__description">
+						{{tab.name}}
+					</p>
 
-
-
 				</li>
-				<li class="js-tabs__content">
-					{% import "../data/_bakery.html" as data %}
-					<div class="main__product product">
-						{% for card in data.cards %}
-						<div class="product__card">
-							<div class="product__img-box">
-								<button class="product__favourite">
-									{{mixins.icon('favourite')}}
-								</button>
-								<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
-								<p class="product__type">
-									{{card.type}}
-								</p>
-							</div>
-					
-							<div class="product__description">
-								<div class="product__title-wrapper">
-									<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
-									<h4 class="product__title">
-										{{card.title}}
-									</h4>
-								</div>
-								<p class="product__price">
-									{{card.price}} ₴
-								</p>
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-				</li>
-				<li class="js-tabs__content">
-					{% import "../data/_breakfast.html" as data %}
-					<div class="main__product product">
-						{% for card in data.cards %}
-						<div class="product__card">
-							<div class="product__img-box">
-								<button class="product__favourite">
-									{{mixins.icon('favourite')}}
-								</button>
-								<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
-								<p class="product__type">
-									{{card.type}}
-								</p>
-							</div>
-					
-							<div class="product__description">
-								<div class="product__title-wrapper">
-									<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
-									<h4 class="product__title">
-										{{card.title}}
-									</h4>
-								</div>
-								<p class="product__price">
-									{{card.price}} ₴
-								</p>
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-				</li>
-				<li class="js-tabs__content">
-					<p>content 4</p>
-				</li>
-				
+				{% endfor %}
 			</ul>
-		</div>
-		<div class="main__basket ">
-			<button class="basket">
-				<span class="basket__count">15</span>
-				<img src="./img/basket.png" alt="Корзина" class="basket__img" width="45" height="45">
-			</button>
-		</div>
+			<div class="tabs__marker js-tabs__marker"></div>
+
+		</nav>
+		<ul class="js-tabs__content-container">
+			<li class="js-tabs__content active">
+
+
+
+				{% import "../data/_product-card.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<div class="product__card">
+						<div class="product__img-box">
+							<button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button>
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
+						</div>
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
+									height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+
+
+
+
+			</li>
+			<li class="js-tabs__content">
+				{% for card in data.cards %}
+				<div class="product__card">
+					<div class="product__img-box">
+						<button class="product__favourite">
+							{{mixins.icon('favourite')}}
+						</button>
+						<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+						<p class="product__type">
+							{{card.type}}
+						</p>
+					</div>
+				
+					<div class="product__description">
+						<div class="product__title-wrapper">
+							<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
+							<h4 class="product__title">
+								{{card.title}}
+							</h4>
+						</div>
+						<p class="product__price">
+							{{card.price}} ₴
+						</p>
+					</div>
+				</div>
+				{% endfor %}
+			</li>
+			<li class="js-tabs__content">
+				{% import "../data/_breakfast.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<div class="product__card">
+						<div class="product__img-box">
+							<button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button>
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
+						</div>
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
+									height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</li>
+			<li class="js-tabs__content">
+				{% import "../data/_bakery.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<div class="product__card">
+						<div class="product__img-box">
+							<button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button>
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
+						</div>
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
+									height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</li>
+			<li class="js-tabs__content">
+				{% import "../data/_coffee.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<div class="product__card">
+						<div class="product__img-box">
+							<button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button>
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
+						</div>
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
+									height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</li>
+			<li class="js-tabs__content">
+				{% import "../data/_sandwich.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<div class="product__card">
+						<div class="product__img-box">
+							<button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button>
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
+						</div>
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
+									height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</li>
+			<li class="js-tabs__content">
+				{% import "../data/_salad.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<div class="product__card">
+						<div class="product__img-box">
+							<button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button>
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
+						</div>
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
+									height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</li>
+			<li class="js-tabs__content">
+				{% import "../data/_bread.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<div class="product__card">
+						<div class="product__img-box">
+							<button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button>
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
+						</div>
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
+									height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</li>
+		</ul>
+
 	</div>
+	
 
 </main>

@@ -2,12 +2,10 @@
 
 .product
 	position: relative
+	cursor: pointer
 	&__card
 		display: flex
 		flex-direction: column
-		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1)
-	&:last-child
-		padding-bottom: 140px
 		&:not(:last-child)			
 			margin-bottom: 8px
 	&__img-box
@@ -17,7 +15,7 @@
 		border-top-right-radius: 16px
 	&__img		
 		width: 100%
-		height: 123px
+		height: 123px		
 		object-fit: cover
 	&__type
 		position: absolute
@@ -26,10 +24,8 @@
 		height: 24px
 		padding: 2px 8px
 		font-weight: 400
-		line-height: 24px
 		letter-spacing: .06em
 		text-transform: uppercase
-		text-align: center
 		font-size: 11px
 		background-color: #ffffff
 	&__favourite
@@ -53,8 +49,8 @@
 		justify-content: space-between
 		align-items: flex-start
 		min-height: 56px
-		overflow: hidden
 		padding: 8px
+		margin-top: -4px
 		border-bottom-left-radius: 16px
 		border-bottom-right-radius: 16px
 		background-color: #ffffff
