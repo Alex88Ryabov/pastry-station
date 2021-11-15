@@ -1,8 +1,8 @@
 // import sayHello from './lib/sayHello';
 
 // sayHello();
-
 import JsTabs from 'js-tabs'
+import burgerToggle from './components/burgerToggle'
 
 if (window.location.pathname === '/') {
   const myTabs = new JsTabs({
@@ -25,3 +25,4 @@ fetch('/data/categories.json')
     console.log(error);
   });
 
+burgerToggle();
