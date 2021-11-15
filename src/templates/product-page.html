@@ -13,12 +13,12 @@ title: product-page-page
     {% for card in data.cards %}
     <div class="product-page__card">
         <div class="product-page__img-box">
-            <button class="product-page__favourite">
+            <!-- <button class="product-page__favourite">
                 {{mixins.icon('favourite')}}
-            </button>
-            <button class="product-page__arrow-btn">
+            </button> -->
+            <a href="{{card.backLink}}" class="product-page__arrow-btn">
                 {{mixins.icon('arrow')}}
-            </button>
+            </a>
             <img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product-page__img">
             <p class="product-page__type">
                 {{card.type}}

@@ -1,5 +1,23 @@
 @import ../variables
 
 .footer
-    height: 100vh
-    background-color: $basic-background-color
+    position: fixed
+    bottom: 0
+    min-width: 320px
+    background-color: transparent
+    &__basket
+        position: absolute
+        bottom: 10px
+        left: 50%
+        transform: translateX(-50%)
+.basket
+
+    &__count
+        position: absolute
+        top: -7px
+        right: -13px
+        padding: 4px
+        color: #ffffff
+        border-radius: 100%
+        background-color: #000000
+        opacity: 0.9

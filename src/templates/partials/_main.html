@@ -8,8 +8,7 @@
 				{% for tab in data.tabs %}
 				<li tabindex="0" class="tabs__tab js-tabs__tab  {{tab.class}}">
 					<div class="tabs__img-box">
-						<img src="{{tab.imageUrl}}" alt="Вкладка {{tab.name}}" class="tabs__img" width="48px"
-							height="48px">
+						<img src="{{tab.imageUrl}}" alt="Вкладка {{tab.name}}" class="tabs__img" width="48px" height="48px">
 
 					</div>
 					<p class="tabs__description">
@@ -30,11 +29,11 @@
 				{% import "../data/_product-card.html" as data %}
 				<div class="main__product product">
 					{% for card in data.cards %}
-					<div class="product__card">
+					<a href="{{card.link}}" class="product__card">
 						<div class="product__img-box">
-							<button class="product__favourite">
+							<!-- <button class="product__favourite">
 								{{mixins.icon('favourite')}}
-							</button>
+							</button> -->
 							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
 							<p class="product__type">
 								{{card.type}}
@@ -43,8 +42,7 @@
 
 						<div class="product__description">
 							<div class="product__title-wrapper">
-								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
-									height="24">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
 								<h4 class="product__title">
 									{{card.title}}
 								</h4>
@@ -53,50 +51,48 @@
 								{{card.price}} ₴
 							</p>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
-
-
-
-
 			</li>
 			<li class="js-tabs__content">
-				{% for card in data.cards %}
-				<div class="product__card">
-					<div class="product__img-box">
-						<button class="product__favourite">
-							{{mixins.icon('favourite')}}
-						</button>
-						<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
-						<p class="product__type">
-							{{card.type}}
-						</p>
-					</div>
-				
-					<div class="product__description">
-						<div class="product__title-wrapper">
-							<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
-							<h4 class="product__title">
-								{{card.title}}
-							</h4>
+				{% import "../data/_favourite.html" as data %}
+				<div class="main__product product">
+					{% for card in data.cards %}
+					<a href="{{card.link}}" class="product__card">
+						<div class="product__img-box">
+							<!-- <button class="product__favourite">
+								{{mixins.icon('favourite')}}
+							</button> -->
+							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
+							<p class="product__type">
+								{{card.type}}
+							</p>
 						</div>
-						<p class="product__price">
-							{{card.price}} ₴
-						</p>
-					</div>
-				</div>
-				{% endfor %}
+
+						<div class="product__description">
+							<div class="product__title-wrapper">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
+								<h4 class="product__title">
+									{{card.title}}
+								</h4>
+							</div>
+							<p class="product__price">
+								{{card.price}} ₴
+							</p>
+						</div>
+					</a>
+					{% endfor %}
 			</li>
 			<li class="js-tabs__content">
 				{% import "../data/_breakfast.html" as data %}
 				<div class="main__product product">
 					{% for card in data.cards %}
-					<div class="product__card">
+					<a href="{{card.link}}" class="product__card">
 						<div class="product__img-box">
-							<button class="product__favourite">
+							<!-- <button class="product__favourite">
 								{{mixins.icon('favourite')}}
-							</button>
+							</button> -->
 							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
 							<p class="product__type">
 								{{card.type}}
@@ -105,8 +101,7 @@
 
 						<div class="product__description">
 							<div class="product__title-wrapper">
-								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
-									height="24">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
 								<h4 class="product__title">
 									{{card.title}}
 								</h4>
@@ -115,7 +110,7 @@
 								{{card.price}} ₴
 							</p>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
 			</li>
@@ -123,11 +118,11 @@
 				{% import "../data/_bakery.html" as data %}
 				<div class="main__product product">
 					{% for card in data.cards %}
-					<div class="product__card">
+					<a href="{{card.link}}" class="product__card">
 						<div class="product__img-box">
-							<button class="product__favourite">
+							<!-- <button class="product__favourite">
 								{{mixins.icon('favourite')}}
-							</button>
+							</button> -->
 							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
 							<p class="product__type">
 								{{card.type}}
@@ -136,8 +131,7 @@
 
 						<div class="product__description">
 							<div class="product__title-wrapper">
-								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
-									height="24">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
 								<h4 class="product__title">
 									{{card.title}}
 								</h4>
@@ -146,7 +140,7 @@
 								{{card.price}} ₴
 							</p>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
 			</li>
@@ -154,11 +148,11 @@
 				{% import "../data/_coffee.html" as data %}
 				<div class="main__product product">
 					{% for card in data.cards %}
-					<div class="product__card">
+					<a href="{{card.link}}" class="product__card">
 						<div class="product__img-box">
-							<button class="product__favourite">
+							<!-- <button class="product__favourite">
 								{{mixins.icon('favourite')}}
-							</button>
+							</button> -->
 							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
 							<p class="product__type">
 								{{card.type}}
@@ -167,8 +161,7 @@
 
 						<div class="product__description">
 							<div class="product__title-wrapper">
-								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
-									height="24">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
 								<h4 class="product__title">
 									{{card.title}}
 								</h4>
@@ -177,7 +170,7 @@
 								{{card.price}} ₴
 							</p>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
 			</li>
@@ -185,11 +178,11 @@
 				{% import "../data/_sandwich.html" as data %}
 				<div class="main__product product">
 					{% for card in data.cards %}
-					<div class="product__card">
+					<a href="{{card.link}}" class="product__card">
 						<div class="product__img-box">
-							<button class="product__favourite">
+							<!-- <button class="product__favourite">
 								{{mixins.icon('favourite')}}
-							</button>
+							</button> -->
 							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
 							<p class="product__type">
 								{{card.type}}
@@ -198,8 +191,7 @@
 
 						<div class="product__description">
 							<div class="product__title-wrapper">
-								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
-									height="24">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
 								<h4 class="product__title">
 									{{card.title}}
 								</h4>
@@ -208,7 +200,7 @@
 								{{card.price}} ₴
 							</p>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
 			</li>
@@ -216,11 +208,11 @@
 				{% import "../data/_salad.html" as data %}
 				<div class="main__product product">
 					{% for card in data.cards %}
-					<div class="product__card">
+					<a href="{{card.link}}" class="product__card">
 						<div class="product__img-box">
-							<button class="product__favourite">
+							<!-- <button class="product__favourite">
 								{{mixins.icon('favourite')}}
-							</button>
+							</button> -->
 							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
 							<p class="product__type">
 								{{card.type}}
@@ -229,8 +221,7 @@
 
 						<div class="product__description">
 							<div class="product__title-wrapper">
-								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
-									height="24">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
 								<h4 class="product__title">
 									{{card.title}}
 								</h4>
@@ -239,7 +230,7 @@
 								{{card.price}} ₴
 							</p>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
 			</li>
@@ -247,11 +238,11 @@
 				{% import "../data/_bread.html" as data %}
 				<div class="main__product product">
 					{% for card in data.cards %}
-					<div class="product__card">
+					<a href="{{card.link}}" class="product__card">
 						<div class="product__img-box">
-							<button class="product__favourite">
+							<!-- <button class="product__favourite">
 								{{mixins.icon('favourite')}}
-							</button>
+							</button> -->
 							<img src="{{card.imgUrl}}" alt="Картинка{{card.title}}" class="product__img">
 							<p class="product__type">
 								{{card.type}}
@@ -260,8 +251,7 @@
 
 						<div class="product__description">
 							<div class="product__title-wrapper">
-								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24"
-									height="24">
+								<img src="{{card.icon}}" alt="{{card.iconName}}" class="product__icon" width="24" height="24">
 								<h4 class="product__title">
 									{{card.title}}
 								</h4>
@@ -270,13 +260,13 @@
 								{{card.price}} ₴
 							</p>
 						</div>
-					</div>
+					</a>
 					{% endfor %}
 				</div>
 			</li>
 		</ul>
 
 	</div>
-	
+	<div class="main__padding"></div>
 
 </main>
