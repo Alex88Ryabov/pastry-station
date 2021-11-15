@@ -15,7 +15,7 @@
       <header class="header">
         <div class="header__in">
           <div class="header__menu">
-            <button class="header__btn">
+            <button class="header__button js-burger">
               <svg class="icon icon-burger">
                 <use xlink:href="img/sprite.svg#icon-burger"></use>
               </svg>
@@ -23,7 +23,7 @@
             <div class="header__box">
               <h1 class="header__logo"> Pastry Station </h1>
             </div>
-            <button class="header__btn">
+            <button class="header__button">
               <svg class="icon icon-search">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
@@ -374,14 +374,66 @@
         </div>
         <div class="main__padding"></div>
       </main>
-      <footer class="footer">
-        <div class="footer__basket basket">
-          <button class="basket__button">
+      <div class="burger-menu">
+        <header class="burger-menu__header">
+          <button class="burger-menu__close-button">
+            <svg class="icon icon-close-button">
+              <use xlink:href="img/sprite.svg#icon-close-button"></use>
+            </svg>
+          </button>
+          <div class="burger-menu__logo"> Pastry Station </div>
+        </header>
+        <main class="burger-menu__hero">
+          <nav class="burger-menu__navigation">
+            <ul class="burger-menu__list">
+              <li class="burger-menu__item">
+                <svg class="icon icon-person">
+                  <use xlink:href="img/sprite.svg#icon-person"></use>
+                </svg>
+                <p class="burger-menu__chapter"> Профиль </p>
+              </li>
+            </ul>
+            <ul class="burger-menu__contacts contacts">
+              <li class="contacts__item">
+                <p class="contacts__icon">
+                  <svg class="icon icon-phone">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                </p>
+                <a href="tel:+380442222222" class="contacts__phone">+38-044-222-22-22</a>
+              </li>
+              <li class="contacts__item social">
+                <a href="#" class="social__link">
+                  <p class="social__icon social__icon--tel">
+                    <svg class="icon icon-telegram">
+                      <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                    </svg>
+                  </p>
+                  <h3 class="social__title"> Telegram </h3>
+                </a>
+              </li>
+              <li class="contacts__item social">
+                <a href="#" class="social__link">
+                  <p class="social__icon social__icon--ins">
+                    <svg class="icon icon-instagram">
+                      <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </p>
+                  <h3 class="social__title"> Insatagram </h3>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </main>
+      </div>
+      <!-- <footer class="footer">
+    <div class="footer__basket basket">
+        <button class="basket__button">
             <span class="basket__count">15</span>
             <img src="./img/basket.png" alt="Корзина" class="basket__img" width="45" height="45">
-          </button>
-        </div>
-      </footer>
+        </button>
+    </div>
+</footer> -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

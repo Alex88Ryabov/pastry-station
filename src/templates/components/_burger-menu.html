@@ -1,0 +1,49 @@
+<div class="burger-menu">
+    <header class="burger-menu__header">
+        <button class="burger-menu__close-button">
+            {{mixins.icon('close-button')}}
+        </button>
+        <div class="burger-menu__logo">
+            Pastry Station
+        </div>
+    </header>
+    <main class="burger-menu__hero">
+        <nav class="burger-menu__navigation">
+            <ul class="burger-menu__list">
+                {% import "../data/_burger-menu-list.html" as data %}
+
+                {% for item in data.items %}
+                <li class="burger-menu__item">
+                    {{mixins.icon(item.icon)}}
+                    <p class="burger-menu__chapter">
+                        {{item.name}}
+                    </p>
+                </li>
+                {% endfor %}
+            </ul>
+            <ul class="burger-menu__contacts contacts">
+                <li class="contacts__item">
+                    <p class="contacts__icon">
+                        {{mixins.icon('phone')}}
+
+                    </p>
+                    <a href="tel:+380442222222" class="contacts__phone">+38-044-222-22-22</a>
+                </li>
+                {% import "../data/_social.html" as data %}
+
+                {% for link in data.links %}
+                <li class="contacts__item social">
+                    <a href="{{link.linkUrl}}" class="social__link">
+                        <p class="social__icon {{link.class}}">
+                            {{mixins.icon(link.mixinsIconName)}}
+                        </p>
+                        <h3 class="social__title">
+                            {{link.name}}
+                        </h3>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </main>
+</div>

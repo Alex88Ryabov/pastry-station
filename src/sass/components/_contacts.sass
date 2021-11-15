@@ -1,0 +1,52 @@
+@import ./variables
+.contacts
+    $this: &
+    &__item
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center       
+        height: 48px
+        background: transparent
+        border: 2px solid $primary-text-color
+        border-radius: 6px
+        font-style: normal
+        font-weight: 600
+        font-size: $medium-font-size
+        line-height: 21px
+        color: $primary-text-color
+        &:not(:last-child)
+            margin-bottom: 8px
+        
+            
+    &__phone
+        color: $primary-text-color
+    &__link
+        display: flex
+        align-items: center
+        text-align: center
+        justify-content: center
+        margin-bottom: 8px
+        height: 44px
+        font-style: normal
+        font-weight: 600
+        font-size: $medium-font-size
+        line-height: 21px
+        color: $primary-text-color
+    &__icon
+        position: absolute
+        left: 32px
+        top: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 26px
+        width: 26px
+        margin-right: 12px
+        border-radius: 50%
+        svg
+            font-size: 28px
+            fill: linear-gradient(to top left, #000000 0%, #ffffff 100%)
+            
+
+

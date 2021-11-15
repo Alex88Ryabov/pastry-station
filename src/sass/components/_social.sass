@@ -1,0 +1,29 @@
+@import ../variables
+    
+.social
+    &__title
+        +fontSR
+        font-weight: 600
+        font-size: $medium-font-size
+    &__link
+        color: $primary-text-color
+        &:hover .social__icon
+            opacity: 0.7
+    &__icon
+        position: absolute
+        left: 32px
+        top: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 24px
+        width: 24px
+        margin-right: 12px
+        border-radius: 50%
+        transition: all 0.2s linear
+        svg
+            fill: #ffffff
+        &--ins
+            background: linear-gradient(45deg,#ffb700 14.65%,#ff6800 31.68%,#cb217d 54.72%,#7e00aa 85.35%)
+        &--tel
+            background-color: #08c

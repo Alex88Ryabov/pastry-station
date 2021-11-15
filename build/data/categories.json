@@ -1,6 +1,8 @@
 [
   {
-    "name": "bla",
+    "id": 1,
+    "name": "category1",
     "icon": "./img/breakfast.png"
   }
+
 ]
