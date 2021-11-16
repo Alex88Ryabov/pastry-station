@@ -1,8 +1,50 @@
 [
   {
+    "name": "Популярное",
+    "imageUrl": "./img/popular.png",
     "id": 1,
-    "name": "category1",
-    "icon": "./img/breakfast.png"
+    "class": "active"
+  },
+  {
+    "name": "Избранное",
+    "imageUrl": "./img/heart.png",
+    "id": 2,
+    "class": ""
+  },
+  {
+    "name": "Завтраки",
+    "imageUrl": "./img/breakfast.png",
+    "id": 3,
+    "class": ""
+  },
+  {
+    "name": "Выпечка",
+    "imageUrl": "./img/croissant.png",
+    "id": 4,
+    "class": ""
+  },
+  {
+    "name": "Кофе",
+    "imageUrl": "./img/coffee.png",
+    "id": 5,
+    "class": ""
+  },
+  {
+    "name": "Сендвич",
+    "imageUrl": "./img/sandwich.png",
+    "id": 6,
+    "class": ""
+  },
+  {
+    "name": "Салат",
+    "imageUrl": "./img/salad.png",
+    "id": 7,
+    "class": ""
+  },
+  {
+    "name": "Выпечка",
+    "imageUrl": "./img/bread.png",
+    "id": 8,
+    "class": ""
   }
-
 ]

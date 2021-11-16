@@ -34,55 +34,7 @@
       <main class="main">
         <div id="my-js-tabs" class="main__in">
           <nav class="main__tabs tabs js-tabs__nav">
-            <ul class="tabs__list js-tabs__tabs-container">
-              <li tabindex="0" class="tabs__tab js-tabs__tab  active">
-                <div class="tabs__img-box">
-                  <img src="./img/popular.png" alt="Вкладка Популярное" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Популярное </p>
-              </li>
-              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                <div class="tabs__img-box">
-                  <img src="./img/heart.png" alt="Вкладка Избранное" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Избранное </p>
-              </li>
-              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                <div class="tabs__img-box">
-                  <img src="./img/breakfast.png" alt="Вкладка Завтраки" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Завтраки </p>
-              </li>
-              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                <div class="tabs__img-box">
-                  <img src="./img/croissant.png" alt="Вкладка Выпечка" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Выпечка </p>
-              </li>
-              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                <div class="tabs__img-box">
-                  <img src="./img/coffee.png" alt="Вкладка Кофе" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Кофе </p>
-              </li>
-              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                <div class="tabs__img-box">
-                  <img src="./img/sandwich.png" alt="Вкладка Сендвич" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Сендвич </p>
-              </li>
-              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                <div class="tabs__img-box">
-                  <img src="./img/salad.png" alt="Вкладка Салат" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Салат </p>
-              </li>
-              <li tabindex="0" class="tabs__tab js-tabs__tab  ">
-                <div class="tabs__img-box">
-                  <img src="./img/bread.png" alt="Вкладка Выпечка" class="tabs__img" width="48px" height="48px">
-                </div>
-                <p class="tabs__description"> Выпечка </p>
-              </li>
+            <ul class="tabs__list js-tabs__tabs-container js-categories-tabs-head">
             </ul>
             <div class="tabs__marker js-tabs__marker"></div>
           </nav>
@@ -426,14 +378,22 @@
           </nav>
         </main>
       </div>
-      <!-- <footer class="footer">
-    <div class="footer__basket basket">
-        <button class="basket__button">
+      <template class="template-category-tab-head">
+        <li tabindex="0">
+          <div class="tabs__img-box">
+            <img src="" tabindex="0" alt="Вкладка" class="tabs__img" width="48px" height="48px">
+          </div>
+          <p class="tabs__description js-tab-title"></p>
+        </li>
+      </template>
+      <footer class="footer">
+        <div class="footer__basket basket">
+          <button class="basket__button">
             <span class="basket__count">15</span>
             <img src="./img/basket.png" alt="Корзина" class="basket__img" width="45" height="45">
-        </button>
-    </div>
-</footer> -->
+          </button>
+        </div>
+      </footer>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

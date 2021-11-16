@@ -1,14 +1,15 @@
 @import ../variables
     
 .social
+    &__link
+        color: $primary-text-color
+        cursor: pointer
+        &:hover .social__icon
+            opacity: 0.7
     &__title
         +fontSR
         font-weight: 600
         font-size: $medium-font-size
-    &__link
-        color: $primary-text-color
-        &:hover .social__icon
-            opacity: 0.7
     &__icon
         position: absolute
         left: 32px

@@ -15,6 +15,10 @@
     cursor: pointer
     &:not(:first-child)
       margin-left: 8px
+
+    &.active
+      #{$this}__description
+        color: black
   &__marker
     position: absolute
     z-index: -1
@@ -23,7 +27,7 @@
     height: 64px
     border-radius: 25%
     background-color: #F9D953!important
-    transition: transform .5s, width .5s, background-color .5s
+    transition: transform 0.5s, width 0.5s, background-color 0.5s
 
   &__img-box
     position: relative
@@ -36,6 +40,11 @@
     margin: 0 auto
     margin-bottom: 4px
 
+  &__img
+    transition: all 0.4s ease-in-out
+    &:focus
+      transform: scale(1.1)
+
   &__description
     display: flex
     justify-content: center
@@ -45,3 +54,5 @@
     font-size: $small-font-size
     color: $basic-text-color
     font-weight: bold
+    &:focus
+      color: $primary-text-color
