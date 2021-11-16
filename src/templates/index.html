@@ -12,8 +12,7 @@ title: Index page
 {% include "partials/_main.html" %}
 {% include "components/_burger-menu.html" %}
 
-
-<template class="template-category-tab-head">
+<template class="template-tab-title">
     <li tabindex="0">
         <div class="tabs__img-box">
             <img src="" tabindex="0" alt="Вкладка" class="tabs__img" width="48px" height="48px">
@@ -22,5 +21,29 @@ title: Index page
     </li>
 </template>
 
+<template class="template-tab-content">
+    <li class="js-tabs__content">
+    </li>
+</template>
+
+<template class="template-product-card">
+
+    <li>
+        <a href="" class="product__card">
+            <div class="product__img-box">
+                <img src="" alt="Картинка" class="product__img js-product__img">
+                <p class="product__type js-product__type"></p>
+            </div>
+            <div class="product__description">
+                <div class="product__title-wrapper">
+                    <img src="" alt="" class="product__icon js-product__icon" width="24" height="24">
+                    <h4 class="product__title"></h4>
+                </div>
+                <p class="product__price js-product__price"> </p>
+            </div>
+        </a>
+    </li>
+
+</template>
 
 {% endblock %}

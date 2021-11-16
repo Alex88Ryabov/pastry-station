@@ -9,6 +9,7 @@ title: product-page-page
 
 
 {% import "./data/_product-card.html" as data %}
+{% include "components/_burger-menu.html" %}
 <div class="product-page">
     {% for card in data.cards %}
     <div class="product-page__card">
