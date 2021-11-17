@@ -1,24 +1,26 @@
 @import ../variables
 .products
-    padding: $basic-padding
-    background-color: $basic-background-color
+	padding: $basic-padding
+	background-color: $basic-background-color
 .product
 	position: relative
 	cursor: pointer
-	margin-bottom: 20px
+	&:not(:last-child)
+		margin-bottom: 20px
+
 	&__card
 		display: flex
 		flex-direction: column
-		box-shadow: 0 2px 3px rgba(0, 0, 0,  0.1)
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1)
 		border-radius: 8px
 	&__img-box
 		position: relative
 		overflow: hidden
 		border-top-left-radius: 8px
 		border-top-right-radius: 8px
-	&__img		
+	&__img
 		width: 100%
-		height: 123px		
+		height: 123px
 		object-fit: cover
 	&__type
 		position: absolute
@@ -32,27 +34,10 @@
 		font-size: 11px
 		color: $primary-text-color
 		background-color: #ffffff
-	&__favourite
-		display: flex
-		align-items: center
-		justify-content: center
-		position: absolute
-		top: 4px
-		right: 4px
-		width: 32px
-		height: 32px
-		border-radius: 50%
-		background-color: rgba(255, 255, 255, 0.4)
-		svg
-			fill: none
-			stroke: #000000
-			stroke-width: 2px
-			font-size: 24px
 	&__description
 		display: flex
 		justify-content: space-between
-		align-items: flex-start
-	
+		align-items: center
 		min-height: 56px
 		padding: 8px
 		margin-top: -4px
@@ -75,7 +60,7 @@
 
 	&__title-wrapper
 		display: flex
-		align-items: flex-start
+		align-items: center
 		justify-content: center
 	&__icon
 		margin-right: 8px

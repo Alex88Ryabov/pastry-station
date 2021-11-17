@@ -4,7 +4,7 @@ function createProducts(products, tabContent) {
     products.forEach(product => {
         const productItem = productsTemplate.content.cloneNode(true);
         productItem.querySelector('li').className = `product`;
-        productItem.querySelector('a').href = `${product.link}?id=${product.id}`;
+        productItem.querySelector('a').href = `product-page.html?id=${product.id}`;
         productItem.querySelector('.js-product__img').src = product.imgUrl;
         productItem.querySelector('.js-product__img').alt = product.title;
         productItem.querySelector('.js-product__type').textContent = product.type;

@@ -1,9 +1,13 @@
 import JsTabs from 'js-tabs';
 import burgerToggle from './components/burgerToggle';
 import productCardAddData from './components/productCardAddData';
-
+import productPageAddProductCardData from './components/productPageAddProductCardData';
+import productPageCounter from './components/productPageCounter';
 
 burgerToggle();
+productPageAddProductCardData();
+productPageCounter();
+
 
 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
   fetch('/data/categories.json')
@@ -54,15 +58,7 @@ if (window.location.pathname === '/' || window.location.pathname === '/index.htm
 //   })
 // })
 
-const queryParams = window.location.search.slice(window.location.search.indexOf('?') + 1).split('&').reduce((acc, query) => {
-  const parts = query.split('=');
-  acc[parts[0]] = parts[1] ? decodeURIComponent(parts[1]) : parts[1];
-  return acc;
-}, {});
 
-fetch('/data/products.json')
-  .then(responce => {
-    responce.json().then(res => {
-      console.log(res.find(p => p.id === +queryParams.id));
-    })
-  })
+
+
+
