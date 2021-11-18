@@ -2,11 +2,11 @@ import JsTabs from 'js-tabs';
 import burgerToggle from './components/burgerToggle';
 import productCardAddData from './components/productCardAddData';
 import productPageAddProductCardData from './components/productPageAddProductCardData';
-import productPageCounter from './components/productPageCounter';
+// import productPageCounter from './components/productPageCounter';
 
 burgerToggle();
 productPageAddProductCardData();
-productPageCounter();
+// productPageCounter();
 
 
 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {

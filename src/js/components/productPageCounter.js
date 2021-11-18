@@ -1,8 +1,7 @@
 function productPageCounter() {
     const counter = document.querySelector('.js-counter');
-    const counterBtns = counter.querySelectorAll('button');
-    const counterValue = counter.querySelector('input');
-
+    const counterBtns = counter.querySelectorAll('.counter__button');
+    const counterValue = counter.querySelector('.counter__input');
     counterBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             const isAdd = e.target.getAttribute('data') === '+';
