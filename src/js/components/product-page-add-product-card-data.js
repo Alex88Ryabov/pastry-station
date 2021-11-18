@@ -4,7 +4,6 @@ function productPageAddProductCardData() {
         acc[parts[0]] = parts[1] ? decodeURIComponent(parts[1]) : parts[1];
         return acc;
     }, {});
-
     fetch('/data/products.json')
         .then(responce => {
             responce.json().then(res => {
@@ -17,6 +16,7 @@ function productPageAddProductCardData() {
                 const productType = document.querySelector('.js-product-type');
                 const productDescription = document.querySelector('.js-product-descr');
                 const productInfo = document.querySelector('.js-product-info');
+                
                 productImg.setAttribute('src', product.imgUrl);
                 productIcon.setAttribute('src', product.icon);
                 productTitle.innerText = product.title;

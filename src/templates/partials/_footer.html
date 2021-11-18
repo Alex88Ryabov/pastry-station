@@ -1,74 +1,41 @@
 <footer class="footer">
-    <div class="footer__basket basket">
-        <button class="basket__button">
-            <span class="basket__count">15</span>
-            <img src="./img/basket.png" alt="Корзина" class="basket__img" width="45" height="45">
+    <div class="footer__basket-btn basket-btn">
+        <button class="basket-btn__button js-basket-btn">
+            <span class="basket-btn__count">15</span>
+            <img src="./img/basket.png" alt="Корзина" class="basket-btn__img" width="45" height="45">
         </button>
     </div>
-    <div class="footer__purchases purchases">
-        <button class="purchases__close">
+    <div class="footer__basket basket js-basket">
+        <button class="basket__close js-basket-close">
             {{mixins.icon('close-button')}}
         </button>
-        <header class="purchases__header">
-            <p class="purchases__info">
+        <header class="basket__header">
+            <p class="basket__info">
                 Ваши покупки:
             </p>
-            <div class="purchases__quantity">
-                <span>9</span>
+            <div class="basket__quantity">
+                <span>0</span>
             </div>
         </header>
-        <ul class="purchases__list">
-            <li class="purchases__item">
-                <div class="purchases__wrapper">
-                    <button class="purchases__product purchase">
-                        <p class="purchase__number">1 {{mixins.icon('close-button')}}</p>
-                        <p class="purchase__name">Продукт 1</p>
-                        <span class="purchase__price">60 ₴</span>
+        <ul class="basket__list">
+            <li class="basket__item">
+                <div class="basket__wrapper">
+                    <button class="basket__product basket-card">
+                        <p class="basket-card__number">1 {{mixins.icon('close-button')}}</p>
+                        <p class="basket-card__name">Продукт 1</p>
+                        <span class="basket-card__price">60 ₴</span>
                     </button>
-                    <div tabindex="0" class="purchase__wrapper purchase__wrapper--add">
+                    <div tabindex="0" class="basket-card__wrapper basket-card__wrapper--add">
                         <span>{{mixins.icon('small-plus')}}</span>
-                        <button class="purchase__add">Добавить</button>
+                        <button class="basket-card__add">Добавить</button>
                     </div>
-                    <div tabindex="0" class="purchase__wrapper purchase__wrapper--delete">
+                    <div tabindex="0" class="basket-card__wrapper basket-card__wrapper--delete">
                         <span>{{mixins.icon('minus')}}</span>    
-                        <button class="purchase__delete">Удалить</button>
+                        <button class="basket-card__delete">Удалить</button>
                     </div>
                 </div>
             </li>
-            <li class="purchases__item">
-                <div class="purchases__wrapper">
-                    <button class="purchases__product purchase">
-                        <p class="purchase__number">1 {{mixins.icon('close-button')}}</p>
-                        <p class="purchase__name">Продукт 1</p>
-                        <span class="purchase__price">60 ₴</span>
-                    </button>
-                    <div tabindex="0" class="purchase__wrapper purchase__wrapper--add">
-                        <span>{{mixins.icon('small-plus')}}</span>
-                        <button class="purchase__add">Добавить</button>
-                    </div>
-                    <div tabindex="0" class="purchase__wrapper purchase__wrapper--delete">
-                        <span>{{mixins.icon('minus')}}</span>    
-                        <button class="purchase__delete">Удалить</button>
-                    </div>
-                </div>
-            </li>
-            <li class="purchases__item">
-                <div class="purchases__wrapper">
-                    <button class="purchases__product purchase">
-                        <p class="purchase__number">1 {{mixins.icon('close-button')}}</p>
-                        <p class="purchase__name">Продукт 1</p>
-                        <span class="purchase__price">60 ₴</span>
-                    </button>
-                    <div tabindex="0" class="purchase__wrapper purchase__wrapper--add">
-                        <span>{{mixins.icon('small-plus')}}</span>
-                        <button class="purchase__add">Добавить</button>
-                    </div>
-                    <div tabindex="0" class="purchase__wrapper purchase__wrapper--delete">
-                        <span>{{mixins.icon('minus')}}</span>    
-                        <button class="purchase__delete">Удалить</button>
-                    </div>
-                </div>
-            </li>
+            
         </ul>
     </div>
 </footer>

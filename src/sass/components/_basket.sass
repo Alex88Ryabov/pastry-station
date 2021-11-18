@@ -1,5 +1,5 @@
 @import ./variables
-.purchases
+.basket
     position: absolute
     bottom: 0
     right: 0
@@ -11,6 +11,9 @@
     border-top-right-radius: 25px
     background-color: #fff
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1)
+    transition: transform 0.5s ease-in-out
+    transform: translateY(100%)
+
     &__close
         position: absolute
         top: 0
@@ -54,10 +57,9 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
         border-radius: 4px
 
-.purchase
+.basket-card
     display: flex
-    flex-grow: 1
-    z-index: 5
+    z-index: 1
     align-items: center
     width: 100%
     background-color: $basic-background-color
@@ -85,6 +87,7 @@
         display: flex
         align-items: center
         justify-content: center
+        
         height: 40px
         width: 99.5%
         background-color: rgb(249, 217, 83)
@@ -102,11 +105,11 @@
         &--add
             position: absolute
             top: -40px
-            transform: translateY(100%)
+            transform: translateY(101%)
         &--delete
             position: absolute
             top: 50px
-            transform: translateY(-100%)
+            transform: translateY(-101%)
     &__add
         width: 40px
         height: 40px
@@ -118,3 +121,8 @@
         margin-right: auto
 .icon-minus
     width: 14px
+.is-shown
+    transform: translateY(0)
+//is-show-counter z-index transform !!!))
+
+// форма: имя телефон емейл комментарии кнопка submit
