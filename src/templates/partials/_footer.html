@@ -25,17 +25,63 @@
                         <p class="basket-cards__name">Продукт 1</p>
                         <span class="basket-cards__price">60 ₴</span>
                     </button>
-                    <button tabindex="0" class="basket-cards__button basket-cards__button--add js-add-button">
+                    <button tabindex="0" class="basket-cards__button basket-cards__button--add  js-add-button">
                         <span>{{mixins.icon('small-plus')}}</span>
                         <p class="basket-cards__action">Добавить</p>
                     </button>
                     <button tabindex="0" class="basket-cards__button basket-cards__button--delete js-delete-button">
-                        <span>{{mixins.icon('minus')}}</span>    
+                        <span>{{mixins.icon('minus')}}</span>
                         <p class="basket-cards__action">Удалить</p>
                     </button>
                 </li>
+                <li class="basket-cards__card js-basket-card">
+                    <button class="basket-cards__item js-basket-cards-button">
+                        <p class="basket-cards__number">1 {{mixins.icon('close-button')}}</p>
+                        <p class="basket-cards__name">Продукт 1</p>
+                        <span class="basket-cards__price">60 ₴</span>
+                    </button>
+                    <button tabindex="0" class="basket-cards__button basket-cards__button--add  js-add-button">
+                        <span>{{mixins.icon('small-plus')}}</span>
+                        <p class="basket-cards__action">Добавить</p>
+                    </button>
+                    <button tabindex="0" class="basket-cards__button basket-cards__button--delete js-delete-button">
+                        <span>{{mixins.icon('minus')}}</span>
+                        <p class="basket-cards__action">Удалить</p>
+                    </button>
+                </li>
+                <li class="basket-cards__card js-basket-card">
+                    <button class="basket-cards__item js-basket-cards-button">
+                        <p class="basket-cards__number">1 {{mixins.icon('close-button')}}</p>
+                        <p class="basket-cards__name">Продукт 1</p>
+                        <span class="basket-cards__price">60 ₴</span>
+                    </button>
+                    <button tabindex="0" class="basket-cards__button basket-cards__button--add  js-add-button">
+                        <span>{{mixins.icon('small-plus')}}</span>
+                        <p class="basket-cards__action">Добавить</p>
+                    </button>
+                    <button tabindex="0" class="basket-cards__button basket-cards__button--delete js-delete-button">
+                        <span>{{mixins.icon('minus')}}</span>
+                        <p class="basket-cards__action">Удалить</p>
+                    </button>
+                </li>
+
             </ul>
-            
+
         </div>
+        <form class="footer__form form">
+            <fieldset>
+                <legend class="form__legend">
+                    Введите ваши данные:
+                </legend>
+                <input type="text" class="form__input form__input--name" placeholder="Введите ваше имя:">
+                <input type="tel" class="form__input form__input--tel" placeholder="Введите ваш телефон:">
+                <input type="email" class="form__input form__input--email" placeholder="Введите ваш email:">
+                <textarea class="form__textarea" name="textarea" id="" cols="30" rows="7"
+                    placeholder="Подробности заказа:">
+</textarea>
+                <input type="submit" class="form__submit" value="Отправить">
+            </fieldset>
+
+        </form>
     </div>
 </footer>
