@@ -148,36 +148,36 @@
               <span>0</span>
             </div>
           </header>
-          <ul class="basket__list">
-            <li class="basket__item">
-              <div class="basket__wrapper">
-                <button class="basket__product basket-card">
-                  <p class="basket-card__number">1 <svg class="icon icon-close-button">
+          <div class="basket-cards js-basket-cards">
+            <ul class="basket-cards__list">
+              <li class="basket-cards__card js-basket-card">
+                <button class="basket-cards__item js-basket-cards-button">
+                  <p class="basket-cards__number">1 <svg class="icon icon-close-button">
                       <use xlink:href="img/sprite.svg#icon-close-button"></use>
                     </svg>
                   </p>
-                  <p class="basket-card__name">Продукт 1</p>
-                  <span class="basket-card__price">60 ₴</span>
+                  <p class="basket-cards__name">Продукт 1</p>
+                  <span class="basket-cards__price">60 ₴</span>
                 </button>
-                <div tabindex="0" class="basket-card__wrapper basket-card__wrapper--add">
+                <button tabindex="0" class="basket-cards__button basket-cards__button--add js-add-button">
                   <span>
                     <svg class="icon icon-small-plus">
                       <use xlink:href="img/sprite.svg#icon-small-plus"></use>
                     </svg>
                   </span>
-                  <button class="basket-card__add">Добавить</button>
-                </div>
-                <div tabindex="0" class="basket-card__wrapper basket-card__wrapper--delete">
+                  <p class="basket-cards__action">Добавить</p>
+                </button>
+                <button tabindex="0" class="basket-cards__button basket-cards__button--delete js-delete-button">
                   <span>
                     <svg class="icon icon-minus">
                       <use xlink:href="img/sprite.svg#icon-minus"></use>
                     </svg>
                   </span>
-                  <button class="basket-card__delete">Удалить</button>
-                </div>
-              </div>
-            </li>
-          </ul>
+                  <p class="basket-cards__action">Удалить</p>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>

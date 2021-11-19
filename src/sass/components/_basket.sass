@@ -41,30 +41,27 @@
         span
             padding: 10px
             font-size: $large-font-size
-    &__list
-    &__item
-        margin: 0 20px
 
-    &__wrapper
+    
+        
+.basket-cards
+    &__list
+        margin: 0 20px
+    &__card
         display: flex
         justify-content: center
         position: relative
         height: 100%
-    &__product
+    &__item
         display: flex
+        align-items: center
         min-height: 50px
+        width: 100%
+        z-index: 1
         border: 0.5px solid #ededed
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
         border-radius: 4px
-
-.basket-card
-    display: flex
-    z-index: 1
-    align-items: center
-    width: 100%
-    background-color: $basic-background-color
-    
-
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        background-color: $basic-background-color
     &__number
         display: flex
         align-items: center
@@ -82,16 +79,15 @@
         margin-left: auto
         margin-right: 10px
         font-size: $medium-font-size
-
-    &__wrapper
+    &__button
         display: flex
         align-items: center
-        justify-content: center
-        
+        justify-content: center       
         height: 40px
         width: 99.5%
+        border-radius: 4px
         background-color: rgb(249, 217, 83)
-
+        transition: transform 0.2s linear
         svg
             font-size: 12px
         span
@@ -109,16 +105,21 @@
         &--delete
             position: absolute
             top: 50px
-            transform: translateY(-101%)
-    &__add
+            transform: translateY(-101%)  
+    &__action
+        display: flex
+        align-items: center
         width: 40px
         height: 40px
         margin-right: auto
 
-    &__delete
-        width: 40px
-        height: 40px
-        margin-right: auto
+.z-index
+    z-index: 10
+
+
+    
+
+
 .icon-minus
     width: 14px
 .is-shown
