@@ -4,7 +4,7 @@ import basketToggle from './components/basket-toggle';
 import productCardAddData from './components/product-card-add-data';
 import productPageAddProductCardData from './components/product-page-add-product-card-data';
 import productPageCounter from './components/product-page-counter';
-// import basketProductCard from './components/basket-product-card';
+import basketProductCard from './components/basket-product-card';
 
 burgerToggle();
 basketToggle();
@@ -12,7 +12,7 @@ if (window.location.pathname === '/product-page.html') {
   productPageAddProductCardData();
 }
 productPageCounter();
-// basketProductCard();
+basketProductCard();
 
 
 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {

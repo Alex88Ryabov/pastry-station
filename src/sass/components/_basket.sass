@@ -50,13 +50,24 @@
     
         
 .basket-cards
+    
+                
+        
     &__list
         margin: 0 20px
+    
     &__card
         display: flex
         justify-content: center
         position: relative
         height: 100%
+        &.is-show
+            .basket-cards__button
+                z-index: 10
+            .basket-cards__button--add,
+            .basket-cards__button--delete
+                transition: z-index 1s ease
+                transform: translateY(0)
     &__item
         display: flex
         align-items: center
@@ -121,10 +132,8 @@
         height: 40px
         margin-right: auto
 
-.z-index
-    z-index: 10
-.button-active
-    z-index: 9
+
+
 
     
 

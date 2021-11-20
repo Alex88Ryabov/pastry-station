@@ -1,22 +1,33 @@
 function basketProductCard () {
 const cardsContainer = document.querySelector('.js-basket-cards');
-const basketCard = cardsContainer.querySelector('.js-basket-card');
-const button = cardsContainer.querySelector('.js-basket-cards-button');
+const basketCards = cardsContainer.querySelectorAll('.js-basket-card');
 const basketButton = cardsContainer.querySelectorAll('.basket-cards__button');
 const addButton = cardsContainer.querySelector('.js-add-button');
 const deleteButton = cardsContainer.querySelector('.js-delete-button');
 
-    button.addEventListener('click', () => {
-        basketCard.classList.add('is-show');
-        if ( basketCard.classList.contains('is-show')) {
-            button.classList.add('z-index');
-            addButton.setAttribute('style', 'transform: translateY(0)');
-            deleteButton.setAttribute('style', 'transform: translateY(0)');
-            basketButton.forEach(basketBtn => {
-                basketBtn.classList.add('button-active');
-            });
-        }
+basketCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        const currentCard = e.target.parentElement
+        currentCard.classList.toggle('is-show');
+        basketCards.forEach(c => {
+            if (c !== currentCard) {
+                c.classList.remove('is-show');
+            }
+        })
+        // card.classList.toggle('is-show');
     })
+})
+    // button.addEventListener('click', () => {
+    //     basketCard.classList.add('is-show');
+    //     if ( basketCard.classList.contains('is-show')) {
+    //         button.classList.add('z-index');
+    //         addButton.setAttribute('style', 'transform: translateY(0)');
+    //         deleteButton.setAttribute('style', 'transform: translateY(0)');
+    //         basketButton.forEach(basketBtn => {
+    //             basketBtn.classList.add('button-active');
+    //         });
+    //     }
+    // })
 
 
 
