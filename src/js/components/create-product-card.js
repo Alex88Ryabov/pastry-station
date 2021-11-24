@@ -1,6 +1,6 @@
-function createProducts(products, tabContent) {
+function createProductCards(products) {
     const productsTemplate = document.querySelector('.template-product-card');
-
+    const fragment = document.createDocumentFragment();
     products.forEach(product => {
         const productItem = productsTemplate.content.cloneNode(true);
         productItem.querySelector('li').className = `product`;
@@ -13,24 +13,10 @@ function createProducts(products, tabContent) {
         productItem.querySelector('h4').textContent = product.title;
         productItem.querySelector('.js-product__price').textContent = product.price;
 
-        tabContent.appendChild(productItem);
+        fragment.appendChild(productItem);
     });
+
+    return fragment;
 }
 
-function productCardAddData(tabContent, parentId) {
-
-    fetch('/data/products.json')
-        .then(response => {
-            response.json().then(res => {
-                const products = res.filter(product => product.parentId === parentId);
-                createProducts(products, tabContent)
-            })
-        })
-        .catch(error => {
-            console.log(error);
-        })
-
-};
-
-module.exports = productCardAddData;
-
+module.exports = createProductCards;

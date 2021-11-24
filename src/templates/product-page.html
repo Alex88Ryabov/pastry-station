@@ -28,16 +28,20 @@ title: product-page-page
             </div>
             <p class="product-page__price js-product-price"></p>
         </div>
-        <button class="product-page__add-button">
-            {{mixins.icon('plus')}}
-        </button>
-        <div class="product-page__counter">
-            <div class="counter js-counter">
-                <button class="counter__button counter__button--minus" type="button" data="-">-</button>
-                <input class="counter__input" type="text" disabled value="1" min="0">
-                <button class="counter__button counter__button--plus" type="button" data="+">+</button>
+
+        <div class="product-page__btns js-add-to-basket-btns">
+            <button class="product-page__add-button product-page__btn js-add-product-to-basket">
+                {{mixins.icon('plus')}}
+            </button>
+            <div class="product-page__counter product-page__btn js-counter-wrap">
+                <div class="counter js-counter">
+                    <button class="counter__button counter__button--minus" type="button" data="-">{{mixins.icon('minus')}}</button>
+                    <input class="counter__input" type="text" disabled value="1" min="0">
+                    <button class="counter__button counter__button--plus" type="button" data="+">{{mixins.icon('plus')}}</button>
+                </div>
             </div>
         </div>
+
         <div class="product-page__wrap">
             <p class="product-page__description js-product-descr"></p>
             <div class="product-page__info js-product-info"></div>

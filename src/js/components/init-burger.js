@@ -1,4 +1,4 @@
-function burgerToggle() {
+function initBurger() {
     const headerIn = document.querySelector('.header__in')
     const burgerBtn = headerIn.querySelector('.js-burger-button')
     const burgerMenu = document.querySelector('.js-burger-menu');
@@ -24,4 +24,4 @@ function burgerToggle() {
     closeBtn.addEventListener('click', closeBurger);
 };
 
-module.exports = burgerToggle;
+module.exports = initBurger;

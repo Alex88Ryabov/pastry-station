@@ -105,16 +105,26 @@
             </div>
             <p class="product-page__price js-product-price"></p>
           </div>
-          <button class="product-page__add-button">
-            <svg class="icon icon-plus">
-              <use xlink:href="img/sprite.svg#icon-plus"></use>
-            </svg>
-          </button>
-          <div class="product-page__counter">
-            <div class="counter js-counter">
-              <button class="counter__button counter__button--minus" type="button" data="-">-</button>
-              <input class="counter__input" type="text" disabled value="1" min="0">
-              <button class="counter__button counter__button--plus" type="button" data="+">+</button>
+          <div class="product-page__btns js-add-to-basket-btns">
+            <button class="product-page__add-button product-page__btn js-add-product-to-basket">
+              <svg class="icon icon-plus">
+                <use xlink:href="img/sprite.svg#icon-plus"></use>
+              </svg>
+            </button>
+            <div class="product-page__counter product-page__btn js-counter-wrap">
+              <div class="counter js-counter">
+                <button class="counter__button counter__button--minus" type="button" data="-">
+                  <svg class="icon icon-minus">
+                    <use xlink:href="img/sprite.svg#icon-minus"></use>
+                  </svg>
+                </button>
+                <input class="counter__input" type="text" disabled value="1" min="0">
+                <button class="counter__button counter__button--plus" type="button" data="+">
+                  <svg class="icon icon-plus">
+                    <use xlink:href="img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="product-page__wrap">
@@ -132,7 +142,7 @@
       <footer class="footer">
         <div class="footer__basket-btn basket-btn">
           <button class="basket-btn__button js-basket-btn">
-            <span class="basket-btn__count">15</span>
+            <span class="basket-btn__count js-basket-count">15</span>
             <img src="./img/basket.png" alt="Корзина" class="basket-btn__img" width="45" height="45">
           </button>
         </div>
@@ -149,86 +159,7 @@
             </div>
           </header>
           <div class="basket-cards js-basket-cards">
-            <ul class="basket-cards__list">
-              <li class="basket-cards__card js-basket-card">
-                <button class="basket-cards__item">
-                  <p class="basket-cards__number">1 <svg class="icon icon-close-button">
-                      <use xlink:href="img/sprite.svg#icon-close-button"></use>
-                    </svg>
-                  </p>
-                  <p class="basket-cards__name">Продукт 1</p>
-                  <span class="basket-cards__price">60 ₴</span>
-                </button>
-                <button tabindex="0" class="basket-cards__button basket-cards__button--add  js-add-button">
-                  <span>
-                    <svg class="icon icon-small-plus">
-                      <use xlink:href="img/sprite.svg#icon-small-plus"></use>
-                    </svg>
-                  </span>
-                  <p class="basket-cards__action">Добавить</p>
-                </button>
-                <button tabindex="0" class="basket-cards__button basket-cards__button--delete js-delete-button">
-                  <span>
-                    <svg class="icon icon-minus">
-                      <use xlink:href="img/sprite.svg#icon-minus"></use>
-                    </svg>
-                  </span>
-                  <p class="basket-cards__action">Удалить</p>
-                </button>
-              </li>
-              <li class="basket-cards__card js-basket-card">
-                <button class="basket-cards__item">
-                  <p class="basket-cards__number">1 <svg class="icon icon-close-button">
-                      <use xlink:href="img/sprite.svg#icon-close-button"></use>
-                    </svg>
-                  </p>
-                  <p class="basket-cards__name">Продукт 1</p>
-                  <span class="basket-cards__price">60 ₴</span>
-                </button>
-                <button tabindex="0" class="basket-cards__button basket-cards__button--add  js-add-button">
-                  <span>
-                    <svg class="icon icon-small-plus">
-                      <use xlink:href="img/sprite.svg#icon-small-plus"></use>
-                    </svg>
-                  </span>
-                  <p class="basket-cards__action">Добавить</p>
-                </button>
-                <button tabindex="0" class="basket-cards__button basket-cards__button--delete js-delete-button">
-                  <span>
-                    <svg class="icon icon-minus">
-                      <use xlink:href="img/sprite.svg#icon-minus"></use>
-                    </svg>
-                  </span>
-                  <p class="basket-cards__action">Удалить</p>
-                </button>
-              </li>
-              <li class="basket-cards__card js-basket-card">
-                <button class="basket-cards__item">
-                  <p class="basket-cards__number">1 <svg class="icon icon-close-button">
-                      <use xlink:href="img/sprite.svg#icon-close-button"></use>
-                    </svg>
-                  </p>
-                  <p class="basket-cards__name">Продукт 1</p>
-                  <span class="basket-cards__price">60 ₴</span>
-                </button>
-                <button tabindex="0" class="basket-cards__button basket-cards__button--add  js-add-button">
-                  <span>
-                    <svg class="icon icon-small-plus">
-                      <use xlink:href="img/sprite.svg#icon-small-plus"></use>
-                    </svg>
-                  </span>
-                  <p class="basket-cards__action">Добавить</p>
-                </button>
-                <button tabindex="0" class="basket-cards__button basket-cards__button--delete js-delete-button">
-                  <span>
-                    <svg class="icon icon-minus">
-                      <use xlink:href="img/sprite.svg#icon-minus"></use>
-                    </svg>
-                  </span>
-                  <p class="basket-cards__action">Удалить</p>
-                </button>
-              </li>
-            </ul>
+            <ul class="basket-cards__list js-basket-cards-wrap"></ul>
           </div>
           <form class="footer__form form">
             <fieldset>
@@ -242,6 +173,31 @@
             </fieldset>
           </form>
         </div>
+        <template class="template-basket-product-card">
+          <li class="basket-cards__card js-basket-card">
+            <button tabindex="0" type="button" data="+" class="basket-cards__button basket-cards__button--add  js-add-button">
+              <span>
+                <svg class="icon icon-small-plus">
+                  <use xlink:href="img/sprite.svg#icon-small-plus"></use>
+                </svg>
+              </span>
+              <p class="basket-cards__action">Добавить</p>
+            </button>
+            <button tabindex="0" type="button" data="-" class="basket-cards__button basket-cards__button--delete js-delete-button">
+              <span>
+                <svg class="icon icon-minus">
+                  <use xlink:href="img/sprite.svg#icon-minus"></use>
+                </svg>
+              </span>
+              <p class="basket-cards__action">Удалить</p>
+            </button>
+            <button class="basket-cards__item">
+              <input type="number" disabled value="" min="0" class="basket-cards__input">
+              <p class="basket-cards__name"></p>
+              <span class="basket-cards__price"></span>
+            </button>
+          </li>
+        </template>
       </footer>
     </div>
     <!-- END content -->
