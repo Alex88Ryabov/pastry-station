@@ -1,3 +1,5 @@
+import initBtnBasket from "./init-btn-basket";
+
 function initBasket() {
     window.BASKET = JSON.parse(localStorage.getItem('basket'));
     window.BASKET_COUNT_ELEMENT = document.querySelector('.js-basket-count')
@@ -15,6 +17,7 @@ function initBasket() {
             window.BASKET_COUNT_ELEMENT.style.display = 'none';
         }
     }
+    initBtnBasket();
 }
 
 module.exports = initBasket;

@@ -11,6 +11,7 @@
     height: 100vh
     padding-top: 48px
     background-color: $basic-background-color
+    
     &--shown
         display: block
     &__header
@@ -34,10 +35,16 @@
             font-size: 24px
     &__logo
         +fontSB
+        display: flex
+        align-items: center
+        justify-content: center
         font-size: $large-font-size
+        a
+            display: block
+            color: $primary-text-color
         
         font-weight: 700
-        text-align: center
+        
     &__hero
         padding: $basic-padding
     &__navigation

@@ -1,20 +1,28 @@
+import basketCardCounter from "./basket-card-counter";
+import getBasketProductsLength from "./get-basket-products-length";
+import getProductFromBasket from "./get-product-from-basket";
+
+
 function createBasketCards() {
 
     const basket = window.BASKET;
     const cardTemplate = document.querySelector('.template-basket-product-card');
     const fragment = document.createDocumentFragment();
+    const basketCardsWrap = document.querySelector('.js-basket-cards-wrap');
+    const btnsWrap = document.querySelector('.js-add-to-basket-btns');
+
 
     basket.forEach(product => {
         const productItem = cardTemplate.content.cloneNode(true);
+        const counterInput = productItem.querySelector('input');
 
         productItem.querySelector('.basket-cards__input').value = product.quantity;
         productItem.querySelector('.basket-cards__name').innerText = product.name;
         productItem.querySelector('.basket-cards__price').innerText = product.price;
 
-        productItem.querySelector('.basket-cards__item').addEventListener('click', (e) => {
-            const currentCard = e.target.parentElement
+        productItem.querySelector('.basket-cards__item').addEventListener('click', function (e) {
+            const currentCard = this.parentElement
             const basketCards = document.querySelectorAll('.js-basket-card');
-
 
             currentCard.classList.toggle('is-show');
             basketCards.forEach(c => {
@@ -24,7 +32,29 @@ function createBasketCards() {
             })
 
         })
+        counterInput.addEventListener('change', (e) => {
+            if (!+e.target.value) {
+                const indexCandidateToRemove = window.BASKET.findIndex(p => p.id === product.id);
+                const queryParams = window.util.getQueryParams(window.location.search)
+                window.BASKET.splice(indexCandidateToRemove, 1);
+                localStorage.setItem('basket', JSON.stringify(window.BASKET));
+                const basketCards = createBasketCards();
+                basketCardsWrap.innerHTML = '';
+                basketCardsWrap.appendChild(basketCards);
+                basketCardCounter();
+                window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
+                if (queryParams.id === product.id) {
+                    btnsWrap.classList.remove('is-show-counter');
+                }
 
+            } else {
+                const candidate = getProductFromBasket(product.id);
+                candidate.quantity = +e.target.value;
+                localStorage.setItem('basket', JSON.stringify(window.BASKET));
+                window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
+                btnsWrap.querySelector('input').value = e.target.value;
+            }
+        })
 
         fragment.appendChild(productItem);
     });

@@ -3,24 +3,21 @@ function initCounter() {
     if (counter) {
         const counterBtns = counter.querySelectorAll('.counter__button');
         const counterValue = counter.querySelector('.counter__input');
-        const minusButton = counter.querySelector('.counter__button--minus');
 
         counterBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const isAdd = e.target.parentElement.getAttribute('data') === '+';
-
-
-                let quantity = +counterValue.value;
-                if (isAdd) {
-                    quantity += 1;
-                } else {
-                    quantity -= 1;
-                }
-                counterValue.value = quantity;
-                // создаем собыбите change на input`e
-                const changeEvent = new Event('change');
-                counterValue.dispatchEvent(changeEvent);
-            })
+            if (btn.getAttribute('data') === '+') {
+                btn.addEventListener('click', () => {
+                    counterValue.value = +counterValue.value + 1;
+                    const changeEvent = new Event('change');
+                    counterValue.dispatchEvent(changeEvent);
+                })
+            } else {
+                btn.addEventListener('click', () => {
+                    counterValue.value = +counterValue.value - 1;
+                    const changeEvent = new Event('change');
+                    counterValue.dispatchEvent(changeEvent);
+                })
+            }
         })
     }
 }

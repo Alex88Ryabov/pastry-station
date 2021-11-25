@@ -17,6 +17,7 @@ function createProductPage(products) {
     const btnAddProductToBasket = document.querySelector('.js-add-product-to-basket');
     const counter = document.querySelector('.js-counter-wrap');
     const counterInput = counter.querySelector('input');
+    const counterInputFromBasket = document.querySelector('.js-basket-card input');
 
 
 
@@ -62,6 +63,7 @@ function createProductPage(products) {
         counterInput.value = candidate ? candidate.quantity : 1;
         btnsWrap.classList.add('is-show-counter');
     })
+
 
     counterInput.addEventListener('change', (e) => {
 
