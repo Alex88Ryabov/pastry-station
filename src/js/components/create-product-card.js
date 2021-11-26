@@ -11,8 +11,7 @@ function createProductCards(products) {
         productItem.querySelector('.js-product__icon').src = product.icon;
         productItem.querySelector('.js-product__icon').alt = product.iconName;
         productItem.querySelector('h4').textContent = product.title;
-        productItem.querySelector('.js-product__price').textContent = product.price;
-
+        productItem.querySelector('.js-product__price').textContent = `${product.price} ₴`;
         fragment.appendChild(productItem);
     });
 

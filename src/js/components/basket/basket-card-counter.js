@@ -18,11 +18,12 @@ function basketCardCounter() {
                         counterValue.value = +counterValue.value - 1
                         const changeEvent = new Event('change');
                         counterValue.dispatchEvent(changeEvent);
-                        console.log(counterValue.value);
-                        
+
+
                     })
                 }
             })
+
         }
     })
 
