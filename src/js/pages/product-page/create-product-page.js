@@ -25,7 +25,7 @@ function createProductPage(products) {
     productIcon.setAttribute('src', product.icon);
     productTitle.innerText = product.title;
     productType.innerText = product.type;
-    productPrice.innerText = product.price;
+    productPrice.innerText = `${product.price} ₴`;
     productDescription.innerText = product.description;
     product.info.forEach(item => {
         const productItem = productsTemplate.content.cloneNode(true);
@@ -58,6 +58,7 @@ function createProductPage(products) {
             }
             window.BASKET.push(productBasket);
             localStorage.setItem('basket', JSON.stringify(window.BASKET));
+            window.BASKET_COUNT_ELEMENT.style.display = 'flex';
         }
         window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
         counterInput.value = candidate ? candidate.quantity : 1;
@@ -74,6 +75,10 @@ function createProductPage(products) {
             localStorage.setItem('basket', JSON.stringify(window.BASKET));
             window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
             btnsWrap.classList.remove('is-show-counter')
+
+            if (!window.BASKET.length) {
+                window.BASKET_COUNT_ELEMENT.style.display = 'none';
+            }
         } else {
             const candidate = getProductFromBasket(product.id)
 

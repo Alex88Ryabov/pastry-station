@@ -43,8 +43,13 @@ function createBasketCards() {
                 basketCardsWrap.appendChild(basketCards);
                 basketCardCounter();
                 window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
-                if (queryParams.id === product.id) {
+                if (+queryParams.id === product.id) {
+                    console.log(btnsWrap);
                     btnsWrap.classList.remove('is-show-counter');
+                }
+
+                if (!window.BASKET.length) {
+                    window.BASKET_COUNT_ELEMENT.style.display = 'none';
                 }
 
             } else {

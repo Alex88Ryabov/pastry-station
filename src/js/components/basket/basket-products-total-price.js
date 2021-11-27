@@ -9,7 +9,7 @@ function basketProductsTotalPrice() {
     })
     if (window.BASKET.length) {
         basketTotalAmount.innerText = `${priceAmount} ₴`;
-        basketCardsTotalQuantity.innerText = quantityAmount;
+        basketCardsTotalQuantity.innerText = `${quantityAmount} штук`;
     }
 }
 

@@ -19,5 +19,10 @@ function initBasket() {
     }
     initBtnBasket();
 }
-
+// const basketCounter = document.querySelector('.js-basket-count');
+//   if (+basketCounter.innerText === 0) {
+//     basketCounter.classList.add('is-hide');
+//   } else {
+//     basketCounter.classList.remove('is-hide');
+//   }
 module.exports = initBasket;
