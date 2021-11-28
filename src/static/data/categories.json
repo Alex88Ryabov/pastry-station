@@ -1,42 +1,27 @@
 [
   {
-    "name": "Популярное",
-    "imageUrl": "./img/popular.png",
+    "name": "Торти",
+    "imageUrl": "./img/cake.png",
     "id": 1
   },
   {
-    "name": "Избранное",
-    "imageUrl": "./img/heart.png",
+    "name": "Десерти",
+    "imageUrl": "./img/desserts.png",
     "id": 2
   },
   {
-    "name": "Завтраки",
-    "imageUrl": "./img/breakfast.png",
+    "name": "Печиво",
+    "imageUrl": "./img/biscuits.png",
     "id": 3
   },
   {
-    "name": "Выпечка",
-    "imageUrl": "./img/croissant.png",
+    "name": "Цукерки",
+    "imageUrl": "./img/candies.png",
     "id": 4
   },
   {
-    "name": "Кофе",
-    "imageUrl": "./img/coffee.png",
+    "name": "Квіти",
+    "imageUrl": "./img/flowers.png",
     "id": 5
-  },
-  {
-    "name": "Сендвич",
-    "imageUrl": "./img/sandwich.png",
-    "id": 6
-  },
-  {
-    "name": "Салат",
-    "imageUrl": "./img/salad.png",
-    "id": 7
-  },
-  {
-    "name": "Выпечка",
-    "imageUrl": "./img/bread.png",
-    "id": 8
   }
 ]

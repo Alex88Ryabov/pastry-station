@@ -1,11 +1,11 @@
 [
     {
         "imgUrl": "./img/mini-set.jpg",
-        "title": "Популярное 1",
-        "icon": "./img/croissant.png",
-        "iconName": "Круассан",
+        "title": "Наполеон",
+        "icon": "./img/cake.png",
+        "iconName": "Торт",
         "price": "195",
-        "type": "Выпечка",
+        "type": "Торти",
         "id": 101,
         "parentId": 1,
         "description": "Какое-то описание",
@@ -26,11 +26,11 @@
     },
     {
         "imgUrl": "./img/mini-set.jpg",
-        "title": "Популярное 2",
-        "icon": "./img/croissant.png",
-        "iconName": "Круассан",
+        "title": "Медовик",
+        "icon": "./img/cake.png",
+        "iconName": "Торт",
         "price": "195",
-        "type": "Выпечка",
+        "type": "Торти",
         "id": 101,
         "parentId": 1,
         "description": "Какое-то описание",
@@ -51,11 +51,11 @@
     },
     {
         "imgUrl": "./img/kuriniy-bulion.jpg",
-        "title": "Избранное 1",
-        "icon": "./img/breakfast.png",
-        "iconName": "Завтрак",
+        "title": "Баноффі",
+        "icon": "./img/desserts.png",
+        "iconName": "Десерт",
         "price": "50",
-        "type": "Избранное",
+        "type": "Десерти",
         "id": 103,
         "parentId": 2,
         "description": "Какое-то описание",
@@ -76,11 +76,11 @@
     },
     {
         "imgUrl": "./img/kuriniy-bulion.jpg",
-        "title": "Избранное 2",
-        "icon": "./img/breakfast.png",
-        "iconName": "Завтрак",
+        "title": "Тирамісу",
+        "icon": "./img/desserts.png",
+        "iconName": "Десерт",
         "price": "50",
-        "type": "Избранное",
+        "type": "Десерти",
         "id": 103,
         "parentId": 2,
         "description": "Какое-то описание",
@@ -101,11 +101,11 @@
     },
     {
         "imgUrl": "./img/kuriniy-bulion.jpg",
-        "title": "Завтраки 1",
-        "icon": "./img/breakfast.png",
-        "iconName": "Завтрак",
+        "title": "Горішок",
+        "icon": "./img/biscuits.png",
+        "iconName": "Печиво",
         "price": "50",
-        "type": "Завтраки",
+        "type": "Печиво",
         "id": 105,
         "parentId": 3,
         "description": "Какое-то описание",
@@ -126,11 +126,11 @@
     },
     {
         "imgUrl": "./img/kuriniy-bulion.jpg",
-        "title": "Завтраки 2",
-        "icon": "./img/breakfast.png",
-        "iconName": "Завтрак",
+        "title": "Трубочка",
+        "icon": "./img/biscuits.png",
+        "iconName": "Печиво",
         "price": "50",
-        "type": "Завтраки",
+        "type": "Печиво",
         "id": 105,
         "parentId": 3,
         "description": "Какое-то описание",
@@ -151,11 +151,11 @@
     },
     {
         "imgUrl": "./img/croissant-apricot.jpg",
-        "title": "Выпечка 1",
-        "icon": "./img/croissant.png",
-        "iconName": "круассан",
+        "title": "Цукерка 1",
+        "icon": "./img/candies.png",
+        "iconName": "Цукерки",
         "price": "85",
-        "type": "Выпечка",
+        "type": "Цукерки",
         "id": 107,
         "parentId": 4,
         "description": "Какое-то описание",
@@ -176,11 +176,11 @@
     },
     {
         "imgUrl": "./img/croissant-apricot.jpg",
-        "title": "Выпечка 2",
-        "icon": "./img/croissant.png",
-        "iconName": "круассан",
+        "title": "Цукерка 2",
+        "icon": "./img/candies.png",
+        "iconName": "Цукерки",
         "price": "85",
-        "type": "Выпечка",
+        "type": "Цукерки",
         "id": 107,
         "parentId": 4,
         "description": "Какое-то описание",
@@ -201,11 +201,11 @@
     },
     {
         "imgUrl": "./img/cappuccino.jpg",
-        "title": "Кофе 1",
-        "icon": "./img/coffee.png",
-        "iconName": "Кофе",
+        "title": "Композиція №1",
+        "icon": "./img/flowers.png",
+        "iconName": "Квіти",
         "price": "75",
-        "type": "Кофе",
+        "type": "Квіти",
         "id": 109,
         "parentId": 5,
         "description": "Какое-то описание",
@@ -226,163 +226,13 @@
     },
     {
         "imgUrl": "./img/cappuccino.jpg",
-        "title": "Кофе 2",
-        "icon": "./img/coffee.png",
-        "iconName": "Кофе",
+        "title": "Композиція №2",
+        "icon": "./img/flowers.png",
+        "iconName": "Квіти",
         "price": "75",
-        "type": "Кофе",
+        "type": "Квіти",
         "id": 109,
         "parentId": 5,
-        "description": "Какое-то описание",
-        "info": [
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            }
-        ]
-    },
-    {
-        "imgUrl": "./img/sandwich.jpg",
-        "title": "Сэндвич 1",
-        "icon": "./img/sandwich.png",
-        "iconName": "Сэндвич",
-        "price": "150",
-        "type": "Сэндвичи",
-        "id": 111,
-        "parentId": 6,
-        "description": "Какое-то описание",
-        "info": [
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            }
-        ]
-    },
-    {
-        "imgUrl": "./img/sandwich.jpg",
-        "title": "Сэндвич 2",
-        "icon": "./img/sandwich.png",
-        "iconName": "Сэндвич",
-        "price": "150",
-        "type": "Сэндвичи",
-        "id": 112,
-        "parentId": 6,
-        "description": "Какое-то описание",
-        "info": [
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            }
-        ]
-    },
-    {
-        "imgUrl": "./img/salat-zelen.jpg",
-        "title": "Салат 1",
-        "icon": "./img/salad.png",
-        "iconName": "Салат",
-        "price": "150",
-        "type": "Салаты",
-        "id": 113,
-        "parentId": 7,
-        "description": "Какое-то описание",
-        "info": [
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            }
-        ]
-    },
-    {
-        "imgUrl": "./img/salat-zelen.jpg",
-        "title": "Салат 2",
-        "icon": "./img/salad.png",
-        "iconName": "Салат",
-        "price": "150",
-        "type": "Салаты",
-        "id": 113,
-        "parentId": 7,
-        "description": "Какое-то описание",
-        "info": [
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            }
-        ]
-    },
-    {
-        "imgUrl": "./img/baget-pshenichniy.jpg",
-        "title": "Хлеб 1",
-        "icon": "./img/bread.png",
-        "iconName": "Хлеб",
-        "price": "35",
-        "type": "Хлеб",
-        "id": 115,
-        "parentId": 8,
-        "description": "Какое-то описание",
-        "info": [
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            },
-            {
-                "title": "Заголовок 1: ",
-                "text": "какой-то текст"
-            }
-        ]
-    },
-    {
-        "imgUrl": "./img/baget-pshenichniy.jpg",
-        "title": "Хлеб 2",
-        "icon": "./img/bread.png",
-        "iconName": "Хлеб",
-        "price": "35",
-        "type": "Хлеб",
-        "id": 116,
-        "parentId": 8,
         "description": "Какое-то описание",
         "info": [
             {

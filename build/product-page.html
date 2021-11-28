@@ -10,18 +10,18 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body>
-    <!-- <div class="overlay"></div>
-  <div class="footer-popup">
-    <button class="footer-popup__close js-popup-close">
-      
-<svg class="icon icon-close-button"><use xlink:href="img/sprite.svg#icon-close-button"></use></svg>
-
-    </button>
-    <p class="footer-popup__text">
-      Ваша корзина пуста.
-    </p>
-    <img src="./img/empty-basket.jpg" alt="" class="footer-popup__img">
-  </div> -->
+    <div class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__in">
+        <button class="popup__close js-popup-close">
+          <svg class="icon icon-close-button">
+            <use xlink:href="img/sprite.svg#icon-close-button"></use>
+          </svg>
+        </button>
+        <p class="popup__title"> Ваша корзина пуста. </p>
+        <img src="./img/empty-basket.jpg" alt="" class="footer-popup__img">
+      </div>
+    </div>
     <!-- BEGIN content -->
     <div class="out">
       <header class="header">
@@ -34,7 +34,7 @@
             </button>
             <a href="index.html" class="header__box">
               <h1 class="header__logo"> Pastry Station </h1>
-              <p class="header__slogan"> Якійсь довгий слоган </p>
+              <p class="header__slogan"> Якийсь довгий слоган </p>
             </a>
             <button class="header__button">
               <svg class="icon icon-search">

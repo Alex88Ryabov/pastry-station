@@ -2,10 +2,10 @@
 
 
 const products = [
-    // Популярное id = 1
+    // Торти id = 1
     {
         imgUrl: './img/mini-set.jpg',
-        title: 'Популярное 1',
+        title: 'Наполеон',
         icon: './img/croissant.png',
         iconName: 'Круассан',
         price: '195',
@@ -17,7 +17,7 @@ const products = [
     },
     {
         imgUrl: './img/mini-set.jpg',
-        title: 'Популярное 2',
+        title: 'Медовик',
         icon: './img/croissant.png',
         iconName: 'Круассан',
         price: '195',
@@ -27,7 +27,7 @@ const products = [
         description: 'Какое-то описание',
         info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
     },
-    // Избранное id = 2
+    // Десерти id = 2
     {
         imgUrl: './img/kuriniy-bulion.jpg',
         title: 'Избранное 1',
@@ -54,7 +54,7 @@ const products = [
         info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
 
     },
-    // Завтраки id = 3
+    // Печиво id = 3
     {
         imgUrl: './img/kuriniy-bulion.jpg',
         title: 'Завтраки 1',
@@ -81,7 +81,7 @@ const products = [
         info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 2', text: 'какой-то текст' }, { title: 'Заголовок 3', text: 'какой-то текст' }]
 
     },
-    // Выпечка id = 4
+    // Цукерки id = 4
     {
         imgUrl: './img/croissant-apricot.jpg',
         title: 'Выпечка 1',
@@ -108,7 +108,7 @@ const products = [
         info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 2', text: 'какой-то текст' }, { title: 'Заголовок 3', text: 'какой-то текст' }]
 
     },
-    // Кофе id = 5
+    // Квіти id = 5
     {
         imgUrl: './img/cappuccino.jpg',
         title: 'Кофе 1',
@@ -131,88 +131,6 @@ const products = [
         type: 'Кофе',
         id: 109,
         parentId: 5,
-        description: 'Какое-то описание',
-        info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
-
-    },
-    //  Сэндвич id = 6
-    {
-        imgUrl: './img/sandwich.jpg',
-        title: 'Сэндвич 1',
-        icon: './img/sandwich.png',
-        iconName: 'Сэндвич',
-        price: '150',
-        type: 'Сэндвичи',
-        id: 111,
-        parentId: 6,
-        description: 'Какое-то описание',
-        info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
-
-    },
-    {
-        imgUrl: './img/sandwich.jpg',
-        title: 'Сэндвич 2',
-        icon: './img/sandwich.png',
-        iconName: 'Сэндвич',
-        price: '150',
-        type: 'Сэндвичи',
-        id: 112,
-        parentId: 6,
-        description: 'Какое-то описание',
-        info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
-
-
-    },
-    // Салат id = 7
-    {
-        imgUrl: './img/salat-zelen.jpg',
-        title: 'Салат 1',
-        icon: './img/salad.png',
-        iconName: 'Салат',
-        price: '150',
-        type: 'Салаты',
-        id: 113,
-        parentId: 7,
-        description: 'Какое-то описание',
-        info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
-
-    },
-    {
-        imgUrl: './img/salat-zelen.jpg',
-        title: 'Салат 2',
-        icon: './img/salad.png',
-        iconName: 'Салат',
-        price: '150',
-        type: 'Салаты',
-        id: 113,
-        parentId: 7,
-        description: 'Какое-то описание',
-        info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
-
-    },
-    // Хлеб id = 8
-    {
-        imgUrl: './img/baget-pshenichniy.jpg',
-        title: 'Хлеб 1',
-        icon: './img/bread.png',
-        iconName: 'Хлеб',
-        price: '35',
-        type: 'Хлеб',
-        id: 115,
-        parentId: 8,
-        description: 'Какое-то описание',
-        info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
-
-    },
-    {
-        imgUrl: './img/baget-pshenichniy.jpg',
-        title: 'Хлеб 2',
-        icon: './img/bread.png',
-        iconName: 'Хлеб',
-        price: '35',
-        type: 'Хлеб',
-        id: 116,
-        parentId: 8,
         description: 'Какое-то описание',
         info: [{ title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }, { title: 'Заголовок 1', text: 'какой-то текст' }]
 
