@@ -1,4 +1,5 @@
 <footer class="footer">
+    
     <div class="footer__basket-btn basket-btn">
         <button class="basket-btn__button js-basket-btn">
             <span class="basket-btn__count js-basket-count">0</span>
@@ -25,18 +26,20 @@
             Всего:&nbsp
             <span></span>
         </div>
-        <form class="footer__form form">
+        <form class="footer__form form" id="form-basket">
             <fieldset>
                 <legend class="form__legend">
-                    Введите ваши данные:
+                    Введіть ваші дані:
                 </legend>
-                <input type="text" class="form__input form__input--name" name="user_name" placeholder="Введите ваше имя:">
+                <input type="text" class="form__input form__input--name" name="user_name"
+                    placeholder="Введите ваше имя:">
                 <input type="tel" class="form__input form__input--tel" name="phone" placeholder="Введите ваш телефон:">
-                <input type="email" class="form__input form__input--email" name="email" placeholder="Введите ваш email:">
-                <textarea class="form__textarea" name="comment" id="" cols="30" rows="7"
+                <input type="email" class="form__input form__input--email" name="email"
+                    placeholder="Введите ваш email:">
+                <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7"
                     placeholder="Подробности заказа:">
 </textarea>
-                <input type="submit" class="form__submit" value="Отправить">
+                <button type="submit" class="form__submit">Відправити</button>
             </fieldset>
 
         </form>
@@ -47,12 +50,12 @@
             <button tabindex="0" type="button" data="+"
                 class="basket-cards__button basket-cards__button--add  js-add-button">
                 <span>{{mixins.icon('small-plus')}}</span>
-                <p class="basket-cards__action">Добавить</p>
+                <p class="basket-cards__action">Додати</p>
             </button>
             <button tabindex="0" type="button" data="-"
                 class="basket-cards__button basket-cards__button--delete js-delete-button">
                 <span>{{mixins.icon('minus')}}</span>
-                <p class="basket-cards__action">Удалить</p>
+                <p class="basket-cards__action">Видалити</p>
             </button>
             <button class="basket-cards__item">
                 <input type="number" disabled value="" min="0" class="basket-cards__input">

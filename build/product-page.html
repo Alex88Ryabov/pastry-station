@@ -10,6 +10,18 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body>
+    <!-- <div class="overlay"></div>
+  <div class="footer-popup">
+    <button class="footer-popup__close js-popup-close">
+      
+<svg class="icon icon-close-button"><use xlink:href="img/sprite.svg#icon-close-button"></use></svg>
+
+    </button>
+    <p class="footer-popup__text">
+      Ваша корзина пуста.
+    </p>
+    <img src="./img/empty-basket.jpg" alt="" class="footer-popup__img">
+  </div> -->
     <!-- BEGIN content -->
     <div class="out">
       <header class="header">
@@ -22,7 +34,7 @@
             </button>
             <a href="index.html" class="header__box">
               <h1 class="header__logo"> Pastry Station </h1>
-              <p class="header__slogan"> Какой-то длинный слоган </p>
+              <p class="header__slogan"> Якійсь довгий слоган </p>
             </a>
             <button class="header__button">
               <svg class="icon icon-search">
@@ -40,7 +52,7 @@
             </svg>
           </button>
           <a class="burger-menu__logo"> Pastry Station </a>
-          <p class="header__slogan"> Какой-то длинный слоган </p>
+          <p class="header__slogan"> Якийсь довгий слоган! </p>
         </header>
         <main class="burger-menu__hero">
           <nav class="burger-menu__navigation">
@@ -163,15 +175,15 @@
           </div>
           <div class="basket__total-amount js-total-amount"> Всего:&nbsp <span></span>
           </div>
-          <form class="footer__form form">
+          <form class="footer__form form" id="form-basket">
             <fieldset>
-              <legend class="form__legend"> Введите ваши данные: </legend>
+              <legend class="form__legend"> Введіть ваші дані: </legend>
               <input type="text" class="form__input form__input--name" name="user_name" placeholder="Введите ваше имя:">
               <input type="tel" class="form__input form__input--tel" name="phone" placeholder="Введите ваш телефон:">
               <input type="email" class="form__input form__input--email" name="email" placeholder="Введите ваш email:">
-              <textarea class="form__textarea" name="comment" id="" cols="30" rows="7" placeholder="Подробности заказа:">
+              <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Подробности заказа:">
 </textarea>
-              <input type="submit" class="form__submit" value="Отправить">
+              <button type="submit" class="form__submit">Відправити</button>
             </fieldset>
           </form>
         </div>
@@ -183,7 +195,7 @@
                   <use xlink:href="img/sprite.svg#icon-small-plus"></use>
                 </svg>
               </span>
-              <p class="basket-cards__action">Добавить</p>
+              <p class="basket-cards__action">Додати</p>
             </button>
             <button tabindex="0" type="button" data="-" class="basket-cards__button basket-cards__button--delete js-delete-button">
               <span>
@@ -191,7 +203,7 @@
                   <use xlink:href="img/sprite.svg#icon-minus"></use>
                 </svg>
               </span>
-              <p class="basket-cards__action">Удалить</p>
+              <p class="basket-cards__action">Видалити</p>
             </button>
             <button class="basket-cards__item">
               <input type="number" disabled value="" min="0" class="basket-cards__input">

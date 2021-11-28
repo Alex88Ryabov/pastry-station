@@ -44,7 +44,6 @@ function createBasketCards() {
                 basketCardCounter();
                 window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
                 if (+queryParams.id === product.id) {
-                    console.log(btnsWrap);
                     btnsWrap.classList.remove('is-show-counter');
                 }
 
