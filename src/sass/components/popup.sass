@@ -3,7 +3,7 @@
 .popup
     display: none
     position: fixed
-    z-index: 200
+    z-index: 250
     width: 100vw
     height: 100vh
     &__overlay
@@ -15,6 +15,7 @@
         position: relative
         padding: 40px 20px 20px
         width: 80%
+        height: 400px
         max-width: 400px
         border-radius: 4px
         background-color: #ffffff
@@ -32,4 +33,10 @@
         text-align: center
         font-size: $large-font-size
     &__img
-        transform: translateX(50%)
+        position: absolute
+        bottom: 40px
+        left: 50%
+        width: 250px
+        height: 200px
+        background-color: #ffffff
+        transform: translateX(-50%)

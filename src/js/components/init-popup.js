@@ -1,8 +1,14 @@
-function initPopup (popupClass, styleDisplay) {
-    const popup = document.querySelector(popupClassclass);
+function initPopup (popupText, popupImg) {
+    const popup = document.querySelector('.js-popup');
     const popupCloseBtn = popup.querySelector('.js-popup-close');
+    const popupTitle = popup.querySelector('.js-popup-title');
+    const popupImage = popup.querySelector('.js-popup-img');
+    
+    popup.style.display = 'block';
+    popupTitle.innerText = popupText;
+    popupImage.setAttribute('src', popupImg);
 
-    popup.style.display = styleDisplay;
+
     popupCloseBtn.addEventListener('click', () => {
         popup.style.display = 'none';
         

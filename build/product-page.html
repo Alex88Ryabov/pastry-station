@@ -18,8 +18,8 @@
             <use xlink:href="img/sprite.svg#icon-close-button"></use>
           </svg>
         </button>
-        <p class="popup__title"> Ваша корзина пуста. </p>
-        <img src="./img/empty-basket.jpg" alt="" class="popup__img">
+        <p class="popup__title js-popup-title"></p>
+        <img src="" class="popup__img js-popup-img">
       </div>
     </div>
     <!-- BEGIN content -->
@@ -177,10 +177,14 @@
           <form class="footer__form form" id="form-basket">
             <fieldset>
               <legend class="form__legend"> Введіть ваші дані: </legend>
-              <input type="text" class="form__input form__input--name" name="user_name" placeholder="Введите ваше имя:">
-              <input type="tel" class="form__input form__input--tel" name="phone" placeholder="Введите ваш телефон:">
-              <input type="email" class="form__input form__input--email" name="email" placeholder="Введите ваш email:">
-              <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Подробности заказа:">
+              <label for="basket-form-login">Ваше им'я</label>
+              <input type="text" id="basket-form-login" class="form__input form__input--name" name="user_name" placeholder="Ваше им'я:">
+              <label for="basket-form-telephone">Ваш телефон</label>
+              <input type="tel" id="basket-form-telephone" class="form__input form__input--tel" name="phone" placeholder="Введіть ваш телефон:">
+              <label for="basket-form-email">Ваша пошта</label>
+              <input type="email" id="basket-form-email" class="form__input form__input--email" name="email" placeholder="Введіть ваш email:">
+              <label for="basket-form-textarea">Коментар до замовлення</label>
+              <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Введіть коментар:">
                 </textarea>
               <button type="submit" class="form__submit">Відправити</button>
             </fieldset>
