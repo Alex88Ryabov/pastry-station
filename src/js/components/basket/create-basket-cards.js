@@ -1,6 +1,7 @@
 import basketCardCounter from "./basket-card-counter";
 import getBasketProductsLength from "./get-basket-products-length";
 import getProductFromBasket from "./get-product-from-basket";
+import basketProductsTotalPrice from "./basket-products-total-price";
 
 
 function createBasketCards() {
@@ -43,12 +44,15 @@ function createBasketCards() {
                 basketCardsWrap.appendChild(basketCards);
                 basketCardCounter();
                 window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
+
                 if (+queryParams.id === product.id) {
                     btnsWrap.classList.remove('is-show-counter');
                 }
 
                 if (!window.BASKET.length) {
                     window.BASKET_COUNT_ELEMENT.style.display = 'none';
+                    basketProductsTotalPrice();
+
                 }
 
             } else {
@@ -57,6 +61,7 @@ function createBasketCards() {
                 localStorage.setItem('basket', JSON.stringify(window.BASKET));
                 window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
                 btnsWrap.querySelector('input').value = e.target.value;
+                basketProductsTotalPrice();
             }
         })
 

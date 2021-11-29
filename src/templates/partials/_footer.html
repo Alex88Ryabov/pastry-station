@@ -1,19 +1,17 @@
 <footer class="footer">
-    
-    <div class="footer__basket-btn basket-btn">
-        <button class="basket-btn__button js-basket-btn">
-            <span class="basket-btn__count js-basket-count">0</span>
-            <img src="./img/basket.png" alt="Корзина" class="basket-btn__img" width="45" height="45">
-        </button>
-    </div>
+
+
+    <button class="basket-btn js-basket-btn">
+        <span class="basket-btn__count js-basket-count">0</span>
+        <img src="./img/basket.png" alt="Корзина" class="basket-btn__img" width="45" height="45">
+    </button>
+
     <div class="footer__basket basket js-basket">
         <button class="basket__close js-basket-close">
             {{mixins.icon('close-button')}}
         </button>
         <header class="basket__header">
-            <p class="basket__info">
-                Ваши покупки:
-            </p>
+            <p class="basket__info"></p>
             <div class="basket__quantity">
                 <span>0</span>
             </div>
@@ -23,7 +21,6 @@
 
         </div>
         <div class="basket__total-amount js-total-amount">
-            Всего:&nbsp
             <span></span>
         </div>
         <form class="footer__form form" id="form-basket">
@@ -38,7 +35,7 @@
                     placeholder="Введите ваш email:">
                 <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7"
                     placeholder="Подробности заказа:">
-</textarea>
+                </textarea>
                 <button type="submit" class="form__submit">Відправити</button>
             </fieldset>
 

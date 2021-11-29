@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body>
-    <div class="popup">
+    <div class="popup js-popup">
       <div class="popup__overlay"></div>
       <div class="popup__in">
         <button class="popup__close js-popup-close">
@@ -19,7 +19,7 @@
           </svg>
         </button>
         <p class="popup__title"> Ваша корзина пуста. </p>
-        <img src="./img/empty-basket.jpg" alt="" class="footer-popup__img">
+        <img src="./img/empty-basket.jpg" alt="" class="popup__img">
       </div>
     </div>
     <!-- BEGIN content -->
@@ -63,7 +63,7 @@
             </svg>
           </button>
           <a class="burger-menu__logo"> Pastry Station </a>
-          <p class="header__slogan"> Якийсь довгий слоган! </p>
+          <p class="header__slogan"> Якийсь довгий слоган </p>
         </header>
         <main class="burger-menu__hero">
           <nav class="burger-menu__navigation">
@@ -72,7 +72,7 @@
                 <svg class="icon icon-person">
                   <use xlink:href="img/sprite.svg#icon-person"></use>
                 </svg>
-                <p class="burger-menu__chapter"> Профиль </p>
+                <p class="burger-menu__chapter"> Профіль </p>
               </li>
             </ul>
             <ul class="burger-menu__contacts contacts">
@@ -138,12 +138,10 @@
         </li>
       </template>
       <footer class="footer">
-        <div class="footer__basket-btn basket-btn">
-          <button class="basket-btn__button js-basket-btn">
-            <span class="basket-btn__count js-basket-count">0</span>
-            <img src="./img/basket.png" alt="Корзина" class="basket-btn__img" width="45" height="45">
-          </button>
-        </div>
+        <button class="basket-btn js-basket-btn">
+          <span class="basket-btn__count js-basket-count">0</span>
+          <img src="./img/basket.png" alt="Корзина" class="basket-btn__img" width="45" height="45">
+        </button>
         <div class="footer__basket basket js-basket">
           <button class="basket__close js-basket-close">
             <svg class="icon icon-close-button">
@@ -151,7 +149,7 @@
             </svg>
           </button>
           <header class="basket__header">
-            <p class="basket__info"> Ваши покупки: </p>
+            <p class="basket__info"></p>
             <div class="basket__quantity">
               <span>0</span>
             </div>
@@ -159,7 +157,8 @@
           <div class="basket-cards js-basket-cards">
             <ul class="basket-cards__list js-basket-cards-wrap"></ul>
           </div>
-          <div class="basket__total-amount js-total-amount"> Всего:&nbsp <span></span>
+          <div class="basket__total-amount js-total-amount">
+            <span></span>
           </div>
           <form class="footer__form form" id="form-basket">
             <fieldset>
@@ -168,7 +167,7 @@
               <input type="tel" class="form__input form__input--tel" name="phone" placeholder="Введите ваш телефон:">
               <input type="email" class="form__input form__input--email" name="email" placeholder="Введите ваш email:">
               <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Подробности заказа:">
-</textarea>
+                </textarea>
               <button type="submit" class="form__submit">Відправити</button>
             </fieldset>
           </form>
