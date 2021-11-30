@@ -9,14 +9,16 @@
     &__overlay
         position: absolute
         width: 100vw
+        min-width: 320px
         height: 100vh
         background-color: rgba(0,0,0,.5);
     &__in
         position: relative
         padding: 40px 20px 20px
         width: 80%
-        height: 400px
-        max-width: 400px
+        height: 250px
+        max-width: 350px
+        min-width: 300px
         border-radius: 4px
         background-color: #ffffff
         box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1)
@@ -31,12 +33,13 @@
     &__title
         margin-bottom: 20px
         text-align: center
-        font-size: $large-font-size
+        font-size: $medium-font-size
     &__img
         position: absolute
-        bottom: 40px
+        bottom: 25px
         left: 50%
-        width: 250px
-        height: 200px
+        width: 130px
+        height: 130px
+        object-fit: cover
         background-color: #ffffff
         transform: translateX(-50%)

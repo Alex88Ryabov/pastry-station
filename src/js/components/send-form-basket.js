@@ -27,7 +27,7 @@ function sendFormBasket() {
             console.log(res);
             if (res.status !== 200) {
                 initPopup('Помилка, повідомлення не відправлено!', './img/error.jpg');
-                submitBtn.setAttribute('disabled', false);
+                submitBtn.removeAttribute('disabled');
             } else {
                 res.text().then(msg => {
                     window.BASKET = [];
@@ -37,11 +37,12 @@ function sendFormBasket() {
                     basketBtn.style.transform = 'translate(-50%, 0)';
                     window.BASKET_COUNT_ELEMENT.style.display = 'none';
                     counter.classList.remove('is-show-counter');
-                    submitBtn.setAttribute('disabled', false);
+                    submitBtn.removeAttribute('disabled');
                 })
             }
         }).catch(error => {
-            submitBtn.setAttribute('disabled', false);
+            submitBtn.removeAttribute('disabled');
+
 
             console.log(error);
         })
