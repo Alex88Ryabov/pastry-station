@@ -17,10 +17,10 @@
 
                 {% for item in data.items %}
                 <li class="burger-menu__item">
+                    <a href="{{item.linkUrl}}" class="burger-menu__chapter">
                     {{mixins.icon(item.icon)}}
-                    <p class="burger-menu__chapter">
                         {{item.name}}
-                    </p>
+                    </a>
                 </li>
                 {% endfor %}
             </ul>

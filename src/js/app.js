@@ -7,6 +7,7 @@ import initBasket from "./components/basket/init-basket";
 import basketProductCard from "./components/basket-product-card";
 import sendFormBasket from './components/send-form-basket';
 
+const doc = document.documentElement;
 
 basketProductCard();
 
@@ -16,10 +17,16 @@ initCounter();
 sendFormBasket();
 
 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-  initHomePage()
+  initHomePage();
+  doc.style.setProperty('--body-bg', '#f4f4f4')
 } else if (window.location.pathname === '/product-page.html') {
   initProductPage();
+  doc.style.setProperty('--body-bg', '#ffffff')
 }
+
+doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+
+
 
 
 

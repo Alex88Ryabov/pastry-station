@@ -68,10 +68,16 @@
           <nav class="burger-menu__navigation">
             <ul class="burger-menu__list">
               <li class="burger-menu__item">
-                <svg class="icon icon-person">
-                  <use xlink:href="img/sprite.svg#icon-person"></use>
-                </svg>
-                <p class="burger-menu__chapter"> Профіль </p>
+                <a href="index.html" class="burger-menu__chapter">
+                  <svg class="icon icon-main">
+                    <use xlink:href="img/sprite.svg#icon-main"></use>
+                  </svg> Главная </a>
+              </li>
+              <li class="burger-menu__item">
+                <a href="about-us.html" class="burger-menu__chapter">
+                  <svg class="icon icon-about-us">
+                    <use xlink:href="img/sprite.svg#icon-about-us"></use>
+                  </svg> О нас </a>
               </li>
             </ul>
             <ul class="burger-menu__contacts contacts">
@@ -142,38 +148,40 @@
           <img src="./img/basket.png" alt="Корзина" class="basket-btn__img" width="45" height="45">
         </button>
         <div class="footer__basket basket js-basket">
-          <button class="basket__close js-basket-close">
-            <svg class="icon icon-close-button">
-              <use xlink:href="img/sprite.svg#icon-close-button"></use>
-            </svg>
-          </button>
-          <header class="basket__header">
-            <p class="basket__info"></p>
-            <div class="basket__quantity">
-              <span>0</span>
+          <div class="basket__overlay js-basket-overlay"></div>
+          <div class="basket__content">
+            <button class="basket__close js-basket-close">
+              <svg class="icon icon-close-button">
+                <use xlink:href="img/sprite.svg#icon-close-button"></use>
+              </svg>
+            </button>
+            <header class="basket__header">
+              <p class="basket__info"></p>
+              <div class="basket__quantity">
+                <span>0</span>
+              </div>
+            </header>
+            <div class="basket-cards js-basket-cards">
+              <ul class="basket-cards__list js-basket-cards-wrap"></ul>
             </div>
-          </header>
-          <div class="basket-cards js-basket-cards">
-            <ul class="basket-cards__list js-basket-cards-wrap"></ul>
+            <div class="basket__total-amount js-total-amount">
+              <span></span>
+            </div>
+            <form class="footer__form form" id="form-basket">
+              <fieldset>
+                <legend class="form__legend"> Введіть ваші дані: </legend>
+                <label for="basket-form-login">Ваше им'я:</label>
+                <input type="text" id="basket-form-login" class="form__input form__input--name" name="user_name" placeholder="Ваше им'я">
+                <label for="basket-form-telephone">Ваш телефон:</label>
+                <input type="tel" id="basket-form-telephone" class="form__input form__input--tel" name="phone" placeholder="Введіть ваш телефон:">
+                <label for="basket-form-email">Ваша пошта:</label>
+                <input type="email" id="basket-form-email" class="form__input form__input--email" name="email" placeholder="Введіть ваш email">
+                <label for="basket-form-textarea">Коментар до замовлення:</label>
+                <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Введіть коментар"></textarea>
+                <button type="submit" class="form__submit">Відправити</button>
+              </fieldset>
+            </form>
           </div>
-          <div class="basket__total-amount js-total-amount">
-            <span></span>
-          </div>
-          <form class="footer__form form" id="form-basket">
-            <fieldset>
-              <legend class="form__legend"> Введіть ваші дані: </legend>
-              <label for="basket-form-login">Ваше им'я</label>
-              <input type="text" id="basket-form-login" class="form__input form__input--name" name="user_name" placeholder="Ваше им'я:">
-              <label for="basket-form-telephone">Ваш телефон</label>
-              <input type="tel" id="basket-form-telephone" class="form__input form__input--tel" name="phone" placeholder="Введіть ваш телефон:">
-              <label for="basket-form-email">Ваша пошта</label>
-              <input type="email" id="basket-form-email" class="form__input form__input--email" name="email" placeholder="Введіть ваш email:">
-              <label for="basket-form-textarea">Коментар до замовлення</label>
-              <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Введіть коментар:">
-                </textarea>
-              <button type="submit" class="form__submit">Відправити</button>
-            </fieldset>
-          </form>
         </div>
         <template class="template-basket-product-card">
           <li class="basket-cards__card js-basket-card">

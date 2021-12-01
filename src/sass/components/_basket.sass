@@ -1,17 +1,36 @@
 @import ./variables
 .basket
-    position: absolute
+    position: fixed
     bottom: 0
     right: 0
     left: 0
-    height: 90vh
-    overflow: auto
-    border-top-left-radius: 25px
-    border-top-right-radius: 25px
-    background-color: #fff
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1)
+    top: 0
     transition: transform 0.3s ease-in-out
     transform: translateY(100%)
+    &__content
+        position: absolute
+        bottom: 0
+        right: 0
+        left: 0
+        z-index: 100
+        height: calc(var(--app-height) - 120px)
+        overflow: auto
+        border-top-left-radius: 25px
+        border-top-right-radius: 25px
+        background-color: #fff
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1)
+    &__overlay
+        position: fixed
+        display: none
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 90
+        width: 100vw
+        min-width: 320px
+        height: 100vh
+        background-color: rgba(0,0,0,.5)
     &__total-amount
         display: flex
         align-items: center
@@ -45,7 +64,9 @@
         span
             padding: 9px
             font-size: $medium-font-size
-
+    &.is-shown
+        .basket__overlay
+            display: block
 
 .icon-minus
     width: 14px

@@ -3,16 +3,16 @@
 .burger-menu
     position: absolute
     top: 0
+    bottom: 0
     left: 0
     right: 0
-    bottom: 0
+    height: calc(100vh - env(safe-area-inset-bottom))
     display: none
-    z-index: 100
+    z-index: 200
     min-width: 320px
-    padding-top: 48px
+    padding-top: 100px
     overflow: auto
     background-color: $basic-background-color
-
     &--shown
         display: block
     &__header
@@ -20,6 +20,7 @@
         top: 0
         left: 0
         right: 0
+        z-index: 201
         padding-top: 4px
         padding-bottom: 4px
         min-width: 320px
@@ -53,10 +54,13 @@
         margin: 16px 0 24px
     &__item
         display: flex
+        a
+            color: $primary-text-color
         align-items: center
         margin-top: 20px
         font-size: $medium-font-size
         svg
+            margin-right: 10px
             font-size: 20px
     &__chapter
         margin-left: 16px
