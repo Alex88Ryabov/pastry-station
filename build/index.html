@@ -27,20 +27,20 @@
       <header class="header">
         <div class="header__in">
           <div class="header__menu">
-            <button class="header__button js-burger-button">
+            <button class="header__button header__button--burger js-burger-button">
               <svg class="icon icon-burger">
                 <use xlink:href="img/sprite.svg#icon-burger"></use>
+              </svg>
+            </button>
+            <button class="header__button header__button--search">
+              <svg class="icon icon-search">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
             </button>
             <a href="index.html" class="header__box">
               <h1 class="header__logo"> Pastry Station </h1>
               <p class="header__slogan"> Якийсь довгий слоган </p>
             </a>
-            <button class="header__button">
-              <svg class="icon icon-search">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
-              </svg>
-            </button>
           </div>
         </div>
       </header>
@@ -71,13 +71,13 @@
                 <a href="index.html" class="burger-menu__chapter">
                   <svg class="icon icon-main">
                     <use xlink:href="img/sprite.svg#icon-main"></use>
-                  </svg> Главная </a>
+                  </svg> Головна </a>
               </li>
               <li class="burger-menu__item">
                 <a href="about-us.html" class="burger-menu__chapter">
                   <svg class="icon icon-about-us">
                     <use xlink:href="img/sprite.svg#icon-about-us"></use>
-                  </svg> О нас </a>
+                  </svg> Про нас </a>
               </li>
             </ul>
             <ul class="burger-menu__contacts contacts">
@@ -178,7 +178,7 @@
                 <input type="email" id="basket-form-email" class="form__input form__input--email" name="email" placeholder="Введіть ваш email">
                 <label for="basket-form-textarea">Коментар до замовлення:</label>
                 <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Введіть коментар"></textarea>
-                <button type="submit" class="form__submit">Відправити</button>
+                <button type="submit" class="form__submit">Оформити замовлення</button>
               </fieldset>
             </form>
           </div>

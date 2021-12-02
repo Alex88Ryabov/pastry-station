@@ -8,32 +8,46 @@ function initTabsCategory(tabsId, categoriesList, productsAll) {
     const tabContentTemplate = document.querySelector('.template-tab-content');
     const tabTitles = document.querySelector('.js-tabs-head');
     const tabContents = document.querySelector('.js-tabs-content');
-
     categories.forEach((category, i) => {
         const tabTitle = tabTitleTemplate.content.cloneNode(true);
         const tabContent = tabContentTemplate.content.cloneNode(true);
-
         if (i === 0) {
+            localStorage.setItem('tab-id', category.id);
             const productsByCategory = productsAll.filter(p => p.parentId === category.id)
             const productsElements = createProductCards(productsByCategory)
 
             tabTitle.querySelector('li').className = `tabs__tab js-tabs__tab active`;
-            tabContent.querySelector('li').className = 'js-tabs__content active'
-            tabContent.querySelector('li').appendChild(productsElements)
+            tabTitle.querySelector('li').setAttribute('data-id', category.id);
+            tabContent.querySelector('li').className = 'js-tabs__content active';
+            tabContent.querySelector('li').appendChild(productsElements);
         } else {
             const productsByCategory = productsAll.filter(p => p.parentId === category.id)
             const productsElements = createProductCards(productsByCategory)
 
             tabTitle.querySelector('li').className = `tabs__tab js-tabs__tab`;
+            tabTitle.querySelector('li').setAttribute('data-id', category.id);
             tabContent.querySelector('li').className = 'js-tabs__content';
             tabContent.querySelector('li').appendChild(productsElements)
         }
 
+        
+
+
         tabTitle.querySelector('img').src = category.imageUrl;
         tabTitle.querySelector('.js-tab-title').textContent = category.name;
-
+        tabTitle.querySelector('li').addEventListener('click', function () {
+            localStorage.setItem('tab-id', this.getAttribute('data-id'));
+        })
         tabTitles.appendChild(tabTitle);
         tabContents.appendChild(tabContent)
+
+
+
+
+
+
+
+
     });
 
 

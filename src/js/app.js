@@ -1,5 +1,4 @@
-import './helpers/util'
-import initBurger from './components/init-burger';
+import './helpers/util';
 import initCounter from './components/init-counters';
 import initProductPage from "./pages/product-page/init-product-page";
 import initHomePage from "./pages/home-page/init-home-page";
@@ -12,21 +11,20 @@ const doc = document.documentElement;
 basketProductCard();
 
 initBasket();
-initBurger();
 initCounter();
 sendFormBasket();
-
 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
   initHomePage();
   doc.style.setProperty('--body-bg', '#f4f4f4')
 } else if (window.location.pathname === '/product-page.html') {
   initProductPage();
   doc.style.setProperty('--body-bg', '#ffffff')
+} else if (window.location.pathname === '/about-us.html') {
+  document.querySelector('.header__button--burger').style.display = 'none';
+  
 }
 
 doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-
-
 
 
 

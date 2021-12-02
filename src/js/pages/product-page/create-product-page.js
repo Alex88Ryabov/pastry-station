@@ -8,6 +8,7 @@ function createProductPage(products) {
     const productsTemplate = document.querySelector('.template-info');
     const productImg = document.querySelector('.js-product-img');
     const productIcon = document.querySelector('.js-product-icon');
+    const productIconAnimation = document.querySelector('.js-product-icon-animation');
     const productTitle = document.querySelector('.js-product-title');
     const productPrice = document.querySelector('.js-product-price');
     const productType = document.querySelector('.js-product-type');
@@ -23,6 +24,7 @@ function createProductPage(products) {
 
     productImg.setAttribute('src', product.imgUrl);
     productIcon.setAttribute('src', product.icon);
+    // productIconAnimation.setAttribute('src', product.icon);
     productTitle.innerText = product.title;
     productType.innerText = product.type;
     productPrice.innerText = `${product.price} ₴`;
