@@ -16,10 +16,10 @@ function createBasketCards() {
     basket.forEach(product => {
         const productItem = cardTemplate.content.cloneNode(true);
         const counterInput = productItem.querySelector('input');
-
+        console.log(product.unit);
         productItem.querySelector('.basket-cards__input').value = product.quantity;
         productItem.querySelector('.basket-cards__name').innerText = product.name;
-        productItem.querySelector('.basket-cards__price').innerText = `${product.price}  ₴`;
+        
 
         productItem.querySelector('.basket-cards__item').addEventListener('click', function (e) {
             const currentCard = this.parentElement

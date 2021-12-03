@@ -2,7 +2,6 @@ import createBasketCards from "./create-basket-cards";
 import basketCardCounter from "./basket-card-counter";
 import basketProductsTotalPrice from "./basket-products-total-price";
 import initPopup from "../init-popup";
-import formOverlay from "./form-overlay";
 
 
 function initBtnBasket() {

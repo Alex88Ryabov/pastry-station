@@ -27,7 +27,11 @@ function createProductPage(products) {
     // productIconAnimation.setAttribute('src', product.icon);
     productTitle.innerText = product.title;
     productType.innerText = product.type;
-    productPrice.innerText = `${product.price} ₴`;
+    if (product.unit) {
+        productPrice.innerText = `${product.price} ₴ / ${product.unit}`;
+    } else {
+        productPrice.innerText = `${product.price} ₴`;
+    }
     productDescription.innerText = product.description;
     product.info.forEach(item => {
         const productItem = productsTemplate.content.cloneNode(true);
