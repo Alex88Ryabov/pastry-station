@@ -103,13 +103,22 @@
             <form class="footer__form form" id="form-basket">
               <fieldset>
                 <legend class="form__legend"> Введіть ваші дані: </legend>
-                <label for="basket-form-login">Ваше им'я:</label>
+                <label class="form__label" for="basket-form-login">Ваше им'я:</label>
                 <input type="text" id="basket-form-login" class="form__input form__input--name" name="user_name" placeholder="Введіть ваше им'я">
-                <label for="basket-form-telephone">Ваш телефон:</label>
+                <label class="form__label" for="basket-form-telephone">Ваш телефон:</label>
                 <input type="tel" id="basket-form-telephone" class="form__input form__input--tel" name="phone" placeholder="Введіть ваш телефон:">
-                <label for="basket-form-email">Ваша пошта:</label>
+                <label class="form__label" for="basket-form-email">Ваша пошта:</label>
                 <input type="email" id="basket-form-email" class="form__input form__input--email" name="email" placeholder="Введіть ваш email">
-                <label for="basket-form-textarea">Коментар до замовлення:</label>
+                <div class="form__radio-wrap">
+                  <label class="form__label--radio" for="radio-delivery">Доставка</label>
+                  <input type="radio" id="radio-delivery" class="form__input form__input--radio" name="radio" checked>
+                  <label class="form__label--radio" for="radio-take-home">Заберу сам</label>
+                  <input type="radio" id="radio-take-home" class="form__input form__input--radio" name="radio">
+                </div>
+                <label class="form__label" for="delivery-adress">Куди доставити:</label>
+                <input type="text" id="delivery-adress" class="form__input form__input--tel" name="phone" placeholder="Адреса доставки">
+                <div class="form__adress">вул. Гірди Артема 13</div>
+                <label class="form__label" for="basket-form-textarea">Коментар до замовлення:</label>
                 <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Введіть коментар"></textarea>
                 <button type="submit" class="form__submit">Оформити замовлення</button>
               </fieldset>

@@ -60,7 +60,9 @@ function createProductPage(products) {
                 name: product.title,
                 price: product.price,
                 quantity: 1,
-
+            }
+            if (product.unit) {
+                productBasket.unit = product.unit;
             }
             window.BASKET.push(productBasket);
             localStorage.setItem('basket', JSON.stringify(window.BASKET));

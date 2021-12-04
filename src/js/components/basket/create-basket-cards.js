@@ -19,8 +19,11 @@ function createBasketCards() {
 
         productItem.querySelector('.basket-cards__input').value = product.quantity;
         productItem.querySelector('.basket-cards__name').innerText = product.name;
-        productItem.querySelector('.basket-cards__price').innerText = `${product.price}  ₴`;
-
+        if (product.unit) {
+            productItem.querySelector('.basket-cards__price').innerText = `${product.price} ₴ / ${product.unit}`;
+        } else {
+            productItem.querySelector('.basket-cards__price').innerText = `${product.price} ₴`;
+        }
         productItem.querySelector('.basket-cards__item').addEventListener('click', function (e) {
             const currentCard = this.parentElement
             const basketCards = document.querySelectorAll('.js-basket-card');

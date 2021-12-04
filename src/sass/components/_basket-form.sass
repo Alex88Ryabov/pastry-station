@@ -7,19 +7,29 @@
     padding: 10px
     margin-top: 20px
     min-width: 320px
-    
+
     fieldset
         margin: 10px
-    label
-        margin-left: 10px
+    &__label
+        margin-eft: 10px
         font-size: 14px
+        &--radio
+            margin-right: 10px
+            font-size: $medium-font-size
+            &:not(:first-child)
+                margin-left: 10px
     &__legend
         margin-bottom: 15px
         text-align: center
         font-size: $large-font-size
         font-weight: normal
+    &__radio-wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 5px
     &__input
-        margin: 10px 0 
+        margin: 10px 0
         margin-bottom: 18px
         padding: 0 15px
         width: 100%
@@ -28,6 +38,11 @@
         border-radius: 4px
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
         background-color: $basic-background-color
+        &--radio
+            width: 10%
+            margin: 0
+            box-shadow: none
+            background-color: transparent
     &__textarea
         width: 100%
         margin: 10px 0
