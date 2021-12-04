@@ -3,12 +3,9 @@
         <button class="burger-menu__close-button js-burger-close-button">
             {{mixins.icon('close-button')}}
         </button>
-        <a class="burger-menu__logo">
-            Pastry Station
+        <a class="burger-menu__logo" href="index.html">
+            {{mixins.icon('logo')}}
         </a>
-        <p class="header__slogan">
-            Якийсь довгий слоган
-        </p>
     </header>
     <main class="burger-menu__hero">
         <nav class="burger-menu__navigation">
@@ -18,7 +15,7 @@
                 {% for item in data.items %}
                 <li class="burger-menu__item">
                     <a href="{{item.linkUrl}}" class="burger-menu__chapter">
-                    {{mixins.icon(item.icon)}}
+                        {{mixins.icon(item.icon)}}
                         {{item.name}}
                     </a>
                 </li>

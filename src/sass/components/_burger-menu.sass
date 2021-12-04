@@ -25,12 +25,12 @@
         padding-bottom: 4px
         min-width: 320px
         min-height: 48px
-        color: $primary-text-color    
+        color: $primary-text-color
         background-color: #ffffff
     &__close-button
         position: absolute
         top: 50%
-        left: 18px
+        left: 16px
         transform: translateY(-50%)
         svg
             font-size: 24px
@@ -39,13 +39,17 @@
         display: flex
         align-items: center
         justify-content: center
-        font-size: $large-font-size
+        height: 60px
+        overflow: hidden
+
+        svg
+            font-size: 140px
         a
             display: block
             color: $primary-text-color
-        
-        font-weight: 700
-        
+
+            font-weight: 700
+
     &__hero
         padding: $basic-padding
     &__navigation
@@ -56,14 +60,11 @@
         display: flex
         a
             color: $primary-text-color
-        align-items: center
-        margin-top: 20px
-        font-size: $medium-font-size
+            align-items: center
+            margin-top: 20px
+            font-size: $medium-font-size
         svg
             margin-right: 10px
             font-size: 20px
     &__chapter
         margin-left: 16px
-
-
-
