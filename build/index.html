@@ -177,13 +177,18 @@
                 <input type="email" id="basket-form-email" class="form__input form__input--email" name="email" placeholder="Введіть ваш email">
                 <div class="form__radio-wrap">
                   <label class="form__label--radio" for="radio-delivery">Доставка</label>
-                  <input type="radio" id="radio-delivery" class="form__input form__input--radio" name="radio" checked>
+                  <input type="radio" id="radio-delivery" class="form__input form__input--radio js-delivery-btn" name="radio">
                   <label class="form__label--radio" for="radio-take-home">Заберу сам</label>
-                  <input type="radio" id="radio-take-home" class="form__input form__input--radio" name="radio">
+                  <input type="radio" id="radio-take-home" class="form__input form__input--radio js-take-myself-btn" name="radio">
                 </div>
-                <label class="form__label" for="delivery-adress">Куди доставити:</label>
-                <input type="text" id="delivery-adress" class="form__input form__input--tel" name="phone" placeholder="Адреса доставки">
-                <div class="form__adress">вул. Гірди Артема 13</div>
+                <div class="form__delivery-wrap js-delivery-wrap">
+                  <label class="form__label" for="delivery-adress">Куди доставити:</label>
+                  <input type="text" id="delivery-adress" class="form__input" name="" placeholder="Адреса доставки">
+                </div>
+                <div class="form__adress-wrap js-adress">
+                  <p class="form__adress-label">Наша адреса:</p>
+                  <div class="form__adress">вул. Гірди Артема 13</div>
+                </div>
                 <label class="form__label" for="basket-form-textarea">Коментар до замовлення:</label>
                 <textarea class="form__textarea" id="basket-form-textarea" cols="30" rows="7" placeholder="Введіть коментар"></textarea>
                 <button type="submit" class="form__submit">Оформити замовлення</button>

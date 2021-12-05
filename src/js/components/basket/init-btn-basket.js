@@ -2,6 +2,7 @@ import createBasketCards from "./create-basket-cards";
 import basketCardCounter from "./basket-card-counter";
 import basketProductsTotalPrice from "./basket-products-total-price";
 import initPopup from "../init-popup";
+import selectRadioBtns from "./select-radio-btns";
 
 
 function initBtnBasket() {
@@ -25,6 +26,7 @@ function initBtnBasket() {
             basket.style.display = 'none';
         } if (window.BASKET.length >= 1) {
             basket.style.display = 'block';
+            selectRadioBtns();
         }
         
     };
