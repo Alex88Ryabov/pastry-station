@@ -7,6 +7,7 @@ function sendFormBasket() {
         const inputUserName = basketForm.querySelector('input[name="user_name"]');
         const inputPhone = basketForm.querySelector('input[name="phone"]');
         const inputEmail = basketForm.querySelector('input[name="email"]');
+        const inputAdress = basketForm.querySelector('input[name="delivery-adress"]');
         const comment = basketForm.querySelector('#basket-form-textarea');
         const submitBtn = basketForm.querySelector('button[type="submit"]');
         const basket = document.querySelector('.js-basket');
@@ -21,7 +22,8 @@ function sendFormBasket() {
                 email: inputEmail.value,
                 comment: comment.value,
                 list: window.BASKET,
-                phone: inputPhone.value
+                phone: inputPhone.value,
+                adress: inputAdress.value
             })
         }).then(res => {
             console.log(res);
