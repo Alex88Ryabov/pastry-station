@@ -104,12 +104,12 @@
             <form class="footer__form form" id="form-basket">
               <fieldset>
                 <legend class="form__legend"> Введіть ваші дані: </legend>
-                <label class="form__label" for="basket-form-login">Ваше им'я:</label>
-                <input type="text" id="basket-form-login" class="form__input form__input--name" name="user_name" placeholder="Введіть ваше им'я">
-                <label class="form__label" for="basket-form-telephone">Ваш телефон:</label>
-                <input type="tel" id="basket-form-telephone" class="form__input form__input--tel" name="phone" placeholder="Введіть ваш телефон:">
-                <label class="form__label" for="basket-form-email">Ваша пошта:</label>
-                <input type="email" id="basket-form-email" class="form__input form__input--email" name="email" placeholder="Введіть ваш email">
+                <label class="form__label" for="basket-form-login">Ваше ім'я:<span>*</span></label>
+                <input type="text" id="basket-form-login" minlength="2" class="form__input form__input--name" required name="user_name" placeholder="Введіть ваше им'я">
+                <label class="form__label" for="basket-form-telephone">Ваш телефон:<span>*</span></label>
+                <input type="number" id="basket-form-telephone" class="form__input form__input--tel" required name="phone" placeholder="Введіть ваш телефон:">
+                <label class="form__label" for="basket-form-email">Ваша пошта:<span>*</span></label>
+                <input type="email" id="basket-form-email" class="form__input form__input--email" required name="email" placeholder="Введіть ваш email">
                 <div class="form__radio-wrap">
                   <input type="radio" id="radio-delivery" class="form__input form__input--radio js-delivery-btn" name="radio">
                   <label class="form__label--radio" for="radio-delivery">Доставка</label>
@@ -117,8 +117,8 @@
                   <label class="form__label--radio" for="radio-take-home">Заберу сам</label>
                 </div>
                 <div class="form__delivery-wrap js-delivery-wrap">
-                  <label class="form__label" for="delivery-adress">Куди доставити:</label>
-                  <input type="text" id="delivery-adress" class="form__input" name="delivery-adress" placeholder="Адреса доставки">
+                  <label class="form__label" for="delivery-adress">Куди доставити:<span>*</span></label>
+                  <input type="text" id="delivery-adress" class="form__input js-delivery-input" name="delivery-adress" placeholder="Адреса доставки">
                 </div>
                 <div class="form__adress-wrap js-adress">
                   <p class="form__adress-label">Наша адреса:</p>

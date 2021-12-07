@@ -24,6 +24,7 @@ function sendFormBasket() {
                 list: window.BASKET,
                 phone: inputPhone.value,
                 adress: inputAdress.value
+                
             })
         }).then(res => {
             console.log(res);
