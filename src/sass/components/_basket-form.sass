@@ -29,6 +29,8 @@
         display: flex
         align-items: center
         margin-bottom: 5px
+    &__input-wrap
+        position: relative
     &__input
         margin: 10px 0
         margin-bottom: 18px
@@ -45,6 +47,14 @@
             margin: 0
             box-shadow: none
             background-color: transparent
+    &__validation-text
+        position: absolute
+        top: 0
+        right: 5px
+        color: red
+        
+
+
     &__delivery-wrap
         display: none
     &__adress-wrap
@@ -78,3 +88,6 @@
         border-radius: 4px
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
         background-color: $basic-background-color
+.error
+    outline: 1px solid red
+    color: red

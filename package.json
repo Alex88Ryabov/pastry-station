@@ -73,6 +73,7 @@
     "lodash": "^4.17.11"
   },
   "dependencies": {
+    "gsap": "^3.8.0",
     "js-tabs": "^1.0.1"
   }
 }

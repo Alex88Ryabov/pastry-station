@@ -169,12 +169,21 @@
             <form class="footer__form form" id="form-basket">
               <fieldset>
                 <legend class="form__legend"> Введіть ваші дані: </legend>
-                <label class="form__label" for="basket-form-login">Ваше ім'я:<span>*</span></label>
-                <input type="text" id="basket-form-login" minlength="2" class="form__input form__input--name" required name="user_name" placeholder="Введіть ваше им'я">
-                <label class="form__label" for="basket-form-telephone">Ваш телефон:<span>*</span></label>
-                <input type="number" id="basket-form-telephone" class="form__input form__input--tel" required name="phone" placeholder="Введіть ваш телефон:">
-                <label class="form__label" for="basket-form-email">Ваша пошта:<span>*</span></label>
-                <input type="email" id="basket-form-email" class="form__input form__input--email" required name="email" placeholder="Введіть ваш email">
+                <div class="form__input-wrap">
+                  <label class="form__label" for="basket-form-name">Ваше ім'я:<span>*</span></label>
+                  <input type="text" id="basket-form-name" minlength="2" class="form__input form__input--name" required name="user_name" placeholder="Введіть ваше им'я">
+                  <span class="form__validation-text js-validation-text-name"></span>
+                </div>
+                <div class="form__input-wrap">
+                  <label class="form__label" for="basket-form-telephone">Ваш телефон:<span>*</span></label>
+                  <input type="number" id="basket-form-telephone" class="form__input form__input--tel" required name="phone" placeholder="Введіть ваш телефон:">
+                  <span class="form__validation-text js-validation-text-telephone"></span>
+                </div>
+                <div class="form__input-wrap">
+                  <label class="form__label" for="basket-form-email">Ваша пошта:<span>*</span></label>
+                  <input type="email" id="basket-form-email" class="form__input form__input--email" required name="email" placeholder="Введіть ваш email">
+                  <span class="form__validation-text js-validation-text-email"></span>
+                </div>
                 <div class="form__radio-wrap">
                   <input type="radio" id="radio-delivery" class="form__input form__input--radio js-delivery-btn" name="radio">
                   <label class="form__label--radio" for="radio-delivery">Доставка</label>
@@ -182,8 +191,11 @@
                   <label class="form__label--radio" for="radio-take-home">Заберу сам</label>
                 </div>
                 <div class="form__delivery-wrap js-delivery-wrap">
-                  <label class="form__label" for="delivery-adress">Куди доставити:<span>*</span></label>
-                  <input type="text" id="delivery-adress" class="form__input js-delivery-input" name="delivery-adress" placeholder="Адреса доставки">
+                  <div class="form__input-wrap">
+                    <label class="form__label" for="delivery-adress">Куди доставити:<span>*</span></label>
+                    <input type="text" id="delivery-adress" class="form__input js-delivery-input" name="delivery-adress" placeholder="Адреса доставки">
+                    <span class="form__validation-text js-validation-text-delivery"></span>
+                  </div>
                 </div>
                 <div class="form__adress-wrap js-adress">
                   <p class="form__adress-label">Наша адреса:</p>

@@ -59,7 +59,7 @@ $headers = 'From: pastrystationkyiv@gmail.com' . "\r\n";
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
-if (mail( "ryabovalex88@gmail.com", "Заявка с сайта", $body, $headers))
+if (mail( "pastrystationkyiv@gmail.com", "Заявка с сайта", $body, $headers))
  {     echo "сообщение успешно отправлено";
 } else {
     echo "при отправке сообщения возникли ошибки";

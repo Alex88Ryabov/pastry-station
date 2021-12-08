@@ -1,14 +1,13 @@
 import getBasketProductsLength from "../../components/basket/get-basket-products-length";
 import getProductFromBasket from "../../components/basket/get-product-from-basket";
-
+import iconAnimation from "./icon-animation"
 
 function createProductPage(products) {
     const queryParams = window.util.getQueryParams(window.location.search);
     const product = products.find(p => p.id === +queryParams.id);
     const productsTemplate = document.querySelector('.template-info');
     const productImg = document.querySelector('.js-product-img');
-    const productIcon = document.querySelector('.js-product-icon');
-    const productIconAnimation = document.querySelector('.js-product-icon-animation');
+    const productIcon = document.querySelector('.js-product-icon img');
     const productTitle = document.querySelector('.js-product-title');
     const productPrice = document.querySelector('.js-product-price');
     const productType = document.querySelector('.js-product-type');
@@ -18,13 +17,11 @@ function createProductPage(products) {
     const btnAddProductToBasket = document.querySelector('.js-add-product-to-basket');
     const counter = document.querySelector('.js-counter-wrap');
     const counterInput = counter.querySelector('input');
-    const counterInputFromBasket = document.querySelector('.js-basket-card input');
 
 
 
     productImg.setAttribute('src', product.imgUrl);
     productIcon.setAttribute('src', product.icon);
-    // productIconAnimation.setAttribute('src', product.icon);
     productTitle.innerText = product.title;
     productType.innerText = product.type;
     if (product.unit) {
@@ -51,6 +48,7 @@ function createProductPage(products) {
 
     btnAddProductToBasket.addEventListener('click', () => {
         const candidate = getProductFromBasket(product.id)
+
         if (candidate) {
             candidate.quantity += 1;
             localStorage.setItem('basket', JSON.stringify(window.BASKET));
@@ -71,6 +69,7 @@ function createProductPage(products) {
         window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
         counterInput.value = candidate ? candidate.quantity : 1;
         btnsWrap.classList.add('is-show-counter');
+        iconAnimation();
     })
 
 
@@ -94,6 +93,7 @@ function createProductPage(products) {
                 candidate.quantity -= 1;
             } else {
                 candidate.quantity += 1;
+                iconAnimation();
             }
 
             localStorage.setItem('basket', JSON.stringify(window.BASKET));
