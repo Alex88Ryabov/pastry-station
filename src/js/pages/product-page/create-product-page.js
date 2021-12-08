@@ -1,6 +1,7 @@
 import getBasketProductsLength from "../../components/basket/get-basket-products-length";
 import getProductFromBasket from "../../components/basket/get-product-from-basket";
 import iconAnimation from "./icon-animation"
+import basketIconAnimation from "./basket-icon-animation"
 
 function createProductPage(products) {
     const queryParams = window.util.getQueryParams(window.location.search);
@@ -70,6 +71,7 @@ function createProductPage(products) {
         counterInput.value = candidate ? candidate.quantity : 1;
         btnsWrap.classList.add('is-show-counter');
         iconAnimation();
+        basketIconAnimation();
     })
 
 
@@ -94,6 +96,7 @@ function createProductPage(products) {
             } else {
                 candidate.quantity += 1;
                 iconAnimation();
+                basketIconAnimation();
             }
 
             localStorage.setItem('basket', JSON.stringify(window.BASKET));

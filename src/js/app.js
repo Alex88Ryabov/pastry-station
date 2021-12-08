@@ -22,7 +22,7 @@ if (window.location.pathname === '/' || window.location.pathname === '/index.htm
 }
 
 doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-
+window.screen.orientation.lock("portrait");
 
   
   
