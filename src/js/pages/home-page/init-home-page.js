@@ -1,8 +1,14 @@
+import JsTabs from "js-tabs";
 import initTabsCategory from "../../components/tabs/init-tabs-categories";
 import initBurger from '../../components/init-burger';
 
+
 function initHomePage() {
     initBurger();
+    const myTabs = new JsTabs({
+        elm: '#js-tabs-categories'
+    })
+    myTabs.init(); 
     const promiseCategories = fetch('/data/categories.json');
     const promiseProducts = fetch('/data/products.json');
     const activeTabId = localStorage.getItem('tab-id');

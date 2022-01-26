@@ -6,6 +6,7 @@ import initBasket from "./components/basket/init-basket";
 import basketProductCard from "./components/basket-product-card";
 import sendFormBasket from './components/send-form-basket';
 
+
 const doc = document.documentElement;
 
 basketProductCard();
@@ -24,8 +25,7 @@ if (window.location.pathname === '/' || window.location.pathname === '/index.htm
 doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 window.screen.orientation.lock("portrait");
 
-  
-  
+ 
   
   
   
