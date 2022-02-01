@@ -12,7 +12,6 @@ function createBasketCards() {
     const basketCardsWrap = document.querySelector('.js-basket-cards-wrap');
     const btnsWrap = document.querySelector('.js-add-to-basket-btns');
 
-
     basket.forEach(product => {
         const productItem = cardTemplate.content.cloneNode(true);
         const counterInput = productItem.querySelector('input');
@@ -61,8 +60,8 @@ function createBasketCards() {
             } else {
                 const candidate = getProductFromBasket(product.id);
                 candidate.quantity = +e.target.value;
-                localStorage.setItem('basket', JSON.stringify(window.BASKET));
                 window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
+                localStorage.setItem('basket', JSON.stringify(window.BASKET));
                 btnsWrap.querySelector('input').value = e.target.value;
                 basketProductsTotalPrice();
             }

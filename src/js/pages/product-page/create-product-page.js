@@ -3,9 +3,8 @@ import getProductFromBasket from "../../components/basket/get-product-from-baske
 import iconAnimation from "./icon-animation"
 import basketIconAnimation from "./basket-icon-animation"
 
-function createProductPage(products) {
-    const queryParams = window.util.getQueryParams(window.location.search);
-    const product = products.find(p => p.id === +queryParams.id);
+function createProductPage(product, category) {
+  console.log(category)
     const productsTemplate = document.querySelector('.template-info');
     const productImg = document.querySelector('.js-product-img');
     const productIcon = document.querySelector('.js-product-icon img');
@@ -21,10 +20,10 @@ function createProductPage(products) {
 
 
 
-    productImg.setAttribute('src', product.imgUrl);
-    productIcon.setAttribute('src', product.icon);
-    productTitle.innerText = product.title;
-    productType.innerText = product.type;
+    productImg.setAttribute('src', product.imageFile);
+    productIcon.setAttribute('src', category.imageFile);
+    productTitle.innerText = product.name;
+    productType.innerText = category.name;
     if (product.unit) {
         productPrice.innerText = `${product.price} ₴ / ${product.unit}`;
     } else {
@@ -56,7 +55,7 @@ function createProductPage(products) {
         } else {
             const productBasket = {
                 id: product.id,
-                name: product.title,
+                name: product.name,
                 price: product.price,
                 quantity: 1,
             }
