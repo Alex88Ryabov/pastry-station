@@ -62,7 +62,9 @@ function createBasketCards() {
                 candidate.quantity = +e.target.value;
                 window.BASKET_COUNT_ELEMENT.innerText = getBasketProductsLength();
                 localStorage.setItem('basket', JSON.stringify(window.BASKET));
-                btnsWrap.querySelector('input').value = e.target.value;
+                if (btnsWrap) {
+                  btnsWrap.querySelector('input').value = e.target.value;
+                }
                 basketProductsTotalPrice();
             }
         })
