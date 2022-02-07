@@ -22,20 +22,20 @@ function initProductPage() {
 
 
 
-  // Promise.all([promiseCategories, promiseProducts])
-  //   .then(values => {
-  //     const promises = [];
-  //     values.forEach(value => {
-  //       promises.push(value.json())
-  //     })
-  //
-  //     Promise.all(promises)
-  //       .then(data => {
-  //         const category = data[0];
-  //         const product = data[1];
-  //         createProductPage(product, category)
-  //       })
-  //   });
+  Promise.all([promiseCategories, promiseProducts])
+    .then(values => {
+      const promises = [];
+      values.forEach(value => {
+        promises.push(value.json())
+      })
+
+      Promise.all(promises)
+        .then(data => {
+          const category = data[0];
+          const product = data[1];
+          createProductPage(product, category)
+        })
+    });
 }
 
 module.exports = initProductPage

@@ -1,10 +1,10 @@
 import getBasketProductsLength from "../../components/basket/get-basket-products-length";
 import getProductFromBasket from "../../components/basket/get-product-from-basket";
-import iconAnimation from "./icon-animation"
-import basketIconAnimation from "./basket-icon-animation"
+import iconAnimation from "./icon-animation";
+import basketIconAnimation from "./basket-icon-animation";
+import environment from "../../helpers/environment";
 
 function createProductPage(product, category) {
-  console.log(category)
     const productsTemplate = document.querySelector('.template-info');
     const productImg = document.querySelector('.js-product-img');
     const productIcon = document.querySelector('.js-product-icon img');
@@ -19,9 +19,10 @@ function createProductPage(product, category) {
     const counterInput = counter.querySelector('input');
 
 
-
-    productImg.setAttribute('src', product.imageFile);
-    productIcon.setAttribute('src', category.imageFile);
+  console.log(product)
+  console.log(category)
+    productImg.setAttribute('src', `${environment.apiUrl}/${product.imageSrc}`);
+    productIcon.setAttribute('src', `${environment.apiUrl}/${category.imageSrc}`);
     productTitle.innerText = product.name;
     productType.innerText = category.name;
     if (product.unit) {

@@ -40,18 +40,14 @@
           </div>
         </div>
       </header>
-      <main class="about-main">
+      <main class="about-us">
         <a href="index.html?back=true" class="product-page__arrow-btn">
           <svg class="icon icon-arrow">
             <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
         </a>
         <div class="container">
-          <div class="about-main__title">
-            <h1>Про нас</h1>
-          </div>
-          <p class="about-main__text">Коли любов до своєї справи виходить за рамки буденної роботи, ти розумієш, що створення своєї власної онлайн-кондитерської це саме те, куди ти хочеш віддати цю любов.</p>
-          <p class="about-main__text">Втілити весь досвід, отриманий у найпопулярніших ресторанах Києва та використати знання, отримані від найкращих українських та світових Шеф-кондитерів рівня зірок Мішлен.</p>
+          <div class="about-us__wrap js-about-us-wrap"></div>
           <!--        <div class="photos">-->
           <!--            <h3 class="photos__title">Фото з <a href="#">Instagram</a></h3>-->
           <!--            <div class="photos__list">-->
@@ -80,6 +76,12 @@
           <!--            </div>-->
           <!--        </div>-->
         </div>
+        <template class="template-about-us">
+          <div>
+            <h1 class="about-us__title"></h1>
+            <p class="about-us__text"></p>
+          </div>
+        </template>
       </main>
       <footer class="footer">
         <button class="basket-btn js-basket-btn">

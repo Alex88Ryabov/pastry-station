@@ -6,58 +6,53 @@ title: Про нас
 {% block content %}
 
 
-<main class="about-main">
-    <a href="index.html?back=true" class="product-page__arrow-btn">
-        {{mixins.icon('arrow')}}
-    </a>
-    <div class="container">
-        <div class="about-main__title">
-            <h1>Про нас</h1>
-
-        </div>
-
-        <p class="about-main__text">Коли любов до своєї справи виходить за рамки буденної роботи, ти розумієш, що створення
-            своєї власної онлайн-кондитерської це саме те, куди ти хочеш віддати цю любов.</p>
-
-        <p class="about-main__text">Втілити весь досвід, отриманий у найпопулярніших ресторанах Києва та використати знання,
-            отримані від найкращих українських та світових Шеф-кондитерів рівня зірок Мішлен.</p>
+<main class="about-us">
+  <a href="index.html?back=true" class="product-page__arrow-btn">
+    {{mixins.icon('arrow')}}
+  </a>
+  <div class="container">
+    <div class="about-us__wrap js-about-us-wrap"></div>
 
 
+    <!--        <div class="photos">-->
+    <!--            <h3 class="photos__title">Фото з <a href="#">Instagram</a></h3>-->
 
-<!--        <div class="photos">-->
-<!--            <h3 class="photos__title">Фото з <a href="#">Instagram</a></h3>-->
+    <!--            <div class="photos__list">-->
 
-<!--            <div class="photos__list">-->
+    <!--                <a href="#" class="photos__item">-->
+    <!--                    <img src="./img/photo1.jpg" alt="якєсь фото">-->
+    <!--                </a>-->
 
-<!--                <a href="#" class="photos__item">-->
-<!--                    <img src="./img/photo1.jpg" alt="якєсь фото">-->
-<!--                </a>-->
+    <!--                <div class="photos__wrap">-->
+    <!--                    <a href="#" class="photos__item">-->
+    <!--                        <img src="./img/photo2.jpg" alt="якєсь фото">-->
+    <!--                    </a>-->
+    <!--                    <a href="#" class="photos__item">-->
+    <!--                        <img src="./img/photo1.jpg" alt="якєсь фото">-->
+    <!--                    </a>-->
+    <!--                </div>-->
 
-<!--                <div class="photos__wrap">-->
-<!--                    <a href="#" class="photos__item">-->
-<!--                        <img src="./img/photo2.jpg" alt="якєсь фото">-->
-<!--                    </a>-->
-<!--                    <a href="#" class="photos__item">-->
-<!--                        <img src="./img/photo1.jpg" alt="якєсь фото">-->
-<!--                    </a>-->
-<!--                </div>-->
+    <!--                <a href="#" class="photos__item">-->
+    <!--                    <img src="./img/photo2.jpg" alt="якєсь фото">-->
+    <!--                </a>-->
 
-<!--                <a href="#" class="photos__item">-->
-<!--                    <img src="./img/photo2.jpg" alt="якєсь фото">-->
-<!--                </a>-->
-
-<!--                <div class="photos__wrap">-->
-<!--                    <a href="#" class="photos__item">-->
-<!--                        <img src="./img/photo2.jpg" alt="якєсь фото">-->
-<!--                    </a>-->
-<!--                    <a href="#" class="photos__item">-->
-<!--                        <img src="./img/photo1.jpg" alt="якєсь фото">-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+    <!--                <div class="photos__wrap">-->
+    <!--                    <a href="#" class="photos__item">-->
+    <!--                        <img src="./img/photo2.jpg" alt="якєсь фото">-->
+    <!--                    </a>-->
+    <!--                    <a href="#" class="photos__item">-->
+    <!--                        <img src="./img/photo1.jpg" alt="якєсь фото">-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+  </div>
+  <template class="template-about-us">
+    <div>
+      <h1 class="about-us__title"></h1>
+      <p class="about-us__text"></p>
     </div>
-
+  </template>
 
 </main>
 
