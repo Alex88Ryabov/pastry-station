@@ -18,9 +18,6 @@ function createProductPage(product, category) {
     const counter = document.querySelector('.js-counter-wrap');
     const counterInput = counter.querySelector('input');
 
-
-  console.log(product)
-  console.log(category)
     productImg.setAttribute('src', `${environment.apiUrl}/${product.imageSrc}`);
     productIcon.setAttribute('src', `${environment.apiUrl}/${category.imageSrc}`);
     productTitle.innerText = product.name;
@@ -31,14 +28,15 @@ function createProductPage(product, category) {
         productPrice.innerText = `${product.price} ₴`;
     }
     productDescription.innerText = product.description;
-    product.info.forEach(item => {
+     product.info.forEach(item => {
         const productItem = productsTemplate.content.cloneNode(true);
         productItem.querySelector('p').className = 'product-page__row';
         productItem.querySelector('b').className = 'product-page__row-title';
         productItem.querySelector('b').innerText = item.title;
         productItem.querySelector('span').innerText = item.text;
         productInfo.appendChild(productItem);
-    })
+      })
+
 
     const candidateFromBasket = getProductFromBasket(product.id)
 
