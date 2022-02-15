@@ -7,7 +7,7 @@ function createProductCards(products, category) {
         const productItem = productsTemplate.content.cloneNode(true);
         productItem.querySelector('li').className = `product`;
         productItem.querySelector('a').href = `product-page.html?id=${product.id}`;
-        productItem.querySelector('.js-product__img').src = `${environment.apiUrl}/${product.imageSrc}`;
+        productItem.querySelector('.js-product__img').src = `${environment.apiUrl}/${product.imageSrc[0]}`;
         productItem.querySelector('.js-product__img').alt = product.name;
         productItem.querySelector('.js-product__type').textContent = category.name;
         productItem.querySelector('.js-product__icon').src = `${environment.apiUrl}/${category.imageSrc}`;

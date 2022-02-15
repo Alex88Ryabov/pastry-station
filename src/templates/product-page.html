@@ -6,60 +6,73 @@ title: product-page-page
 {% block content %}
 
 
-
-
 {% import "./data/_product-card.html" as data %}
 {% include "components/_burger-menu.html" %}
 <div class="product-page">
-    <div class="product-page__card">
-        <div class="product-page__img-box">
-            <a href="index.html?back=true" class="product-page__arrow-btn">
-                {{mixins.icon('arrow')}}
-            </a>
-            <img src="" alt="" class="product-page__img js-product-img">
-            <p class="product-page__type js-product-type"></p>
+  <a href="index.html?back=true" class="product-page__arrow-btn">
+    {{mixins.icon('arrow')}}
+  </a>
+  <div class="product-page__card js-product-page__card"></div>
+  <div class="js-product-page__slider"></div>
+
+
+  <div class="product-page__wrapper">
+    <div class="product-page__value">
+      <div class="product-page__title-wrapper">
+        <div class="product-page__icon js-product-icon">
+          <img src="" alt="" width="24" height="24">
+
         </div>
+
+        <h4 class="product-page__title js-product-title"></h4>
+      </div>
+      <p class="product-page__price js-product-price"></p>
     </div>
-    <div class="product-page__wrapper">
-        <div class="product-page__value">
-            <div class="product-page__title-wrapper">
-                <div class="product-page__icon js-product-icon">
-                    <img src="" alt="" width="24" height="24">
 
-                </div>
-
-                <h4 class="product-page__title js-product-title"></h4>
-            </div>
-            <p class="product-page__price js-product-price"></p>
+    <div class="product-page__btns js-add-to-basket-btns">
+      <button class="product-page__add-button product-page__btn js-add-product-to-basket">
+        {{mixins.icon('plus')}}
+      </button>
+      <div class="product-page__counter product-page__btn js-counter-wrap">
+        <div class="counter js-counter">
+          <button class="counter__button counter__button--minus" type="button" data="-">{{mixins.icon('minus')}}
+          </button>
+          <input class="counter__input" type="text" disabled value="1" min="0">
+          <button class="counter__button counter__button--plus" type="button" data="+">{{mixins.icon('plus')}}</button>
         </div>
-
-        <div class="product-page__btns js-add-to-basket-btns">
-            <button class="product-page__add-button product-page__btn js-add-product-to-basket">
-                {{mixins.icon('plus')}}
-            </button>
-            <div class="product-page__counter product-page__btn js-counter-wrap">
-                <div class="counter js-counter">
-                    <button class="counter__button counter__button--minus" type="button" data="-">{{mixins.icon('minus')}}</button>
-                    <input class="counter__input" type="text" disabled value="1" min="0">
-                    <button class="counter__button counter__button--plus" type="button" data="+">{{mixins.icon('plus')}}</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-page__wrap">
-            <p class="product-page__description js-product-descr"></p>
-            <div class="product-page__info js-product-info"></div>
-        </div>
+      </div>
     </div>
+
+    <div class="product-page__wrap">
+      <p class="product-page__description js-product-description"></p>
+      <div class="product-page__info js-product-info"></div>
+    </div>
+  </div>
 
 </div>
 
 <template class="template-info">
-    <p class="product-page__row">
-        <b class="product-page__row-title"></b>
-        <span class="product-page__row-text"></span>
-    </p>
+  <p class="product-page__row">
+    <b class="product-page__row-title"></b>
+    <span class="product-page__row-text"></span>
+  </p>
 </template>
 
+<template class="template-slider">
+    <div class="product-page__slider-wrap js-slider"></div>
+    <p class="product-page__type js-product-type"></p>
+</template>
+<template class="template-slide">
+  <div class="product-page__img-box js-product-page__img-box">
+    <img src="" alt="" class="product-page__img js-product-img">
+  </div>
+</template>
+
+<template class="template-image">
+    <div class="product-page__img-box">
+      <p class="product-page__type js-product-type"></p>
+      <img src="" alt="" class="product-page__img js-product-img">
+    </div>
+</template>
 
 {% endblock %}
