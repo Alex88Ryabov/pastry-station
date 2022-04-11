@@ -12,17 +12,17 @@ function initHomePage() {
     const promiseCategories = fetch(`${environment.apiUrl}/api/categories`);
     const promiseProducts = fetch(`${environment.apiUrl}/api/products`);
     const activeTabId = localStorage.getItem('tab-id');
-    // fetch('${environment.apiUrl}/api/categories')
-    //   .then(res => {
-    //     res.json()
-    //       .then(categories => {
-    //
-    //         console.log(categories)
-    //       })
-    // })
-    //   .catch(error => {
-    //   console.log(error)
-    // })
+    fetch(`${environment.apiUrl}/api/categories`)
+      .then(res => {
+        res.json()
+          .then(categories => {
+
+            console.log(categories)
+          })
+    })
+      .catch(error => {
+      console.log(error)
+    })
 
     Promise.all([promiseCategories, promiseProducts])
         .then(values => {

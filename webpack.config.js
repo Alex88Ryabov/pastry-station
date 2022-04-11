@@ -4,6 +4,7 @@ const config = require('./gulp/config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { copyFile } = require('fs');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackFavicons = require('webpack-favicons');
 
 function createConfig(env) {
   let isProduction,
@@ -115,3 +116,4 @@ function createConfig(env) {
 
 module.exports = createConfig();
 module.exports.createConfig = createConfig;
+
